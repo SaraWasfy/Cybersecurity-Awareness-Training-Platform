@@ -8,16 +8,15 @@ import Photo from '../images/ShieldCut.png';
 import X from '../images/X.png';
 
 function SignUp() {
-  const initialUserState = {
+  const [user, setUser] = useState({
     firstname: "",
     lastname: "",
     email: "",
-    phone: "01XXXXXXXXX",
+    phone: "",
     username: "",
     password: "",
-  };
+  });
 
-  const [user, setUser] = useState (initialUserState);
   const [message, setMessage] = useState('')
   let navigate = useNavigate();
   
@@ -43,15 +42,15 @@ function SignUp() {
   async function signup(e) {
     e.preventDefault();
     try {
-      const response = await SignUpService.registerPatient(user);
-      //console.log(response.data);
+      const response = await SignUpService.signup(user);
+      console.log(response.data);
       alert(response.data)
       console.log(response.data);
       if (response.data.success) {
         alert('Data saved successfully!');
       } else {
         alert('Welcome to our platform, login now');
-        navigate("../", { replace: true });
+        // navigate("../", { replace: true });
       }
     } catch (error) {
       console.error(error);
@@ -79,7 +78,7 @@ function SignUp() {
     <div style={{width: 1920, height: 1080, left: 0, top: 0, position: 'absolute'}}><img style={{width: 30, height: 37, left: 24, top: 24, position: 'absolute', borderRadius: 9999}} 
                         src={logo} alt="logo" />
         
-        <div style={{width: 839, height: 958, left: 88, top: 56, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+        <form onSubmit= {signup} style={{width: 839, height: 958, left: 88, top: 56, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
             <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 2, display: 'flex'}}>
                 <div style={{color: '#333333', fontSize: 32, fontFamily: 'Poppins', fontWeight: '500', wordWrap: 'break-word'}}>Sign Up</div>
                 <div style={{ padding: 2, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex' }}>
@@ -88,7 +87,7 @@ function SignUp() {
                 <span style={{ color: '#666666', fontSize: '16px', fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}> </span>
                 <span style={{ color: '#111111', fontSize: '16px', fontFamily: 'Poppins', fontWeight: '400', textDecoration: 'underline', wordWrap: 'break-word' }}>Sign in</span>
             </div>
-        </div>
+         </div>
 
             </div>
             <div style={{ height: 87, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 4, display: 'flex' }}>
@@ -96,7 +95,7 @@ function SignUp() {
                     <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>First name</div>
                 </div>
                 <div style={{ width: 534, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
-                    <input type="text" placeholder="Enter your first name" style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins' }} />
+                <input name="firstname" type="text" placeholder="Enter your first name" onChange={handleInputChange} value={user.firstname} style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins' }} />
                 </div>
             </div>
 
@@ -105,7 +104,7 @@ function SignUp() {
                     <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Last name</div>
                 </div>
                 <div style={{ width: 534, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
-                    <input type="text" placeholder="Enter your last name" style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins' }} />
+                <input name="lastname" type="text" placeholder="Enter your last name" onChange={handleInputChange} value={user.lastname} style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins' }} />
                 </div>
             </div>
             <div style={{ height: 87, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 4, display: 'flex' }}>
@@ -113,7 +112,7 @@ function SignUp() {
                     <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Email</div>
                 </div>
                 <div style={{ width: 665, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
-                    <input type="email" placeholder="Enter your email" style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
+                <input name="email" type="email" placeholder="Enter your email" onChange={handleInputChange} value={user.email}  style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
                 </div>
             </div>
 
@@ -122,7 +121,7 @@ function SignUp() {
                     <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Phone Number</div>
                 </div>
                 <div style={{ width: 665, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
-                    <input type="tel" placeholder="Enter your phone number" style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
+                <input name="phone" type="tel" placeholder="Enter your phone number" onChange={handleInputChange} value={user.phone} style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
                 </div>
             </div>
 
@@ -131,7 +130,7 @@ function SignUp() {
                     <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Username</div>
                 </div>
                 <div style={{ width: 665, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
-                    <input type="text" placeholder="Enter your username" style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
+                <input name="username" type="text" placeholder="Enter your username" onChange={handleInputChange} value={user.username}  style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
                 </div>
             </div>
 
@@ -141,7 +140,7 @@ function SignUp() {
                         <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Password</div>
                     </div>
                     <div style={{ width: 665, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
-                        <input type="password" placeholder="Enter your password" style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
+                    <input name="password" type="password" placeholder="Enter your password" onChange={handleInputChange} value={user.password} style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
                     </div>
                 </div>
                 <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 18, display: 'inline-flex'}}>
@@ -174,14 +173,58 @@ function SignUp() {
                 </div>
             </div>
             <div style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
-                <div style={{width: 256, height: 64, paddingTop: 15, paddingBottom: 16, paddingLeft: 31, paddingRight: 31, opacity: 0.25, background: '#111111', borderRadius: 32, overflow: 'hidden', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                    <div style={{justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                        <div style={{textAlign: 'center', color: 'white', fontSize: 22, fontFamily: 'Poppins', fontWeight: '500', wordWrap: 'break-word'}}>Create an ccount</div>
-                    </div>
-                </div>
+            <div style={{
+  width: '256px', 
+  height: '64px', 
+  paddingTop: '15px', 
+  paddingBottom: '16px', 
+  paddingLeft: '31px', 
+  paddingRight: '31px', 
+  opacity: 1,  // Changed to full opacity for better visibility
+  background: '#FFFFFF',  // Changed to a more vibrant color
+  borderRadius: '32px', 
+  overflow: 'hidden', 
+  justifyContent: 'center', 
+  alignItems: 'center', 
+  display: 'flex'
+}}>
+  <div style={{
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    gap: '8px', 
+    display: 'flex'
+  }}>
+    <button type="submit" style={{
+      textAlign: 'center', 
+      color: 'white',  // Changed from grey to white for better readability
+      backgroundColor: '#007bff',  // Button color matches the container
+      fontSize: '18px',  // Slightly reduced for aesthetic balance
+      fontFamily: 'Poppins', 
+      fontWeight: '500', 
+      border: 'none',  // Clean look without border
+      borderRadius: '32px',  // Rounded to match the container
+      padding: '10px 20px',  // More appropriate padding for button size
+      cursor: 'pointer',  // Cursor indicates clickable
+      transition: 'background-color 0.3s, transform 0.3s',  // Smooth transition for hover effect
+      outline: 'none'  // Removes outline to clean up focus state
+    }} 
+    onMouseOver={(e) => {
+      e.currentTarget.style.backgroundColor = '#1bc0c8';  // Darken button on hover
+      e.currentTarget.style.transform = 'scale(1.55)';  // Slight scale to give feedback
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.backgroundColor = '#666666';  // Revert button color on mouse out
+      e.currentTarget.style.transform = 'scale(1.55)';  // Revert scale
+    }}
+    >
+      Create an account 
+    </button>
+  </div>
+</div>
+
             </div>
-        </div>
-        <div style={{width: 32, height: 32, left: 991, top: 24, position: 'absolute'}}>
+         </form>
+         <div style={{width: 32, height: 32, left: 991, top: 24, position: 'absolute'}}>
             <div style={{width: 32, height: 32, left: 0, top: 0, position: 'absolute'}}></div>
             {/* <div style={{width: 18.67, height: 18.67, left: 6.67, top: 6.67, position: 'absolute', background: '#666666'}}></div> */}
             <img style={{width: 19, height: 19, left: 6.67, top: 6.67, position: 'absolute'}} src={X} alt="X" />
