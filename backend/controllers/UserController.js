@@ -17,7 +17,7 @@ const signup = async (req, res) => {
       password: hashedPassword,
     });
     newUser.save().catch((err) => console.log(err));
-    res.status(200).send("created");
+    res.status(200).send("Created");
 };
   
 const getUsers = async (req, res) => {

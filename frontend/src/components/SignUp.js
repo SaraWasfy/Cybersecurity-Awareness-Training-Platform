@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import logo from '../images/Shield logo 2.png';
 import Photo from '../images/ShieldCut.png';
 import X from '../images/X.png';
+import signUpService from "../services/signUpService";
 
 function SignUp() {
   const [user, setUser] = useState({
@@ -22,7 +23,7 @@ function SignUp() {
   
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    if(name == 'password'){
+    if(name === 'password'){
       if (value.length < 6) {
         setMessage('Password is too short');
       } else if (!/\d/.test(value)) {
@@ -42,15 +43,14 @@ function SignUp() {
   async function signup(e) {
     e.preventDefault();
     try {
-      const response = await SignUpService.signup(user);
+      const response = await signUpService.signup(user);
+      //console.log(response.data);
       console.log(response.data);
-      alert(response.data)
-      console.log(response.data);
-      if (response.data.success) {
-        alert('Data saved successfully!');
-      } else {
+      if (response.data) {
         alert('Welcome to our platform, login now');
-        // navigate("../", { replace: true });
+        navigate("../login", { replace: true });
+      } else {
+        alert(`Error, Please Try Again`);
       }
     } catch (error) {
       console.error(error);
@@ -71,7 +71,8 @@ function SignUp() {
         alert(`Error: ${error.message}`);
       }
     }
-  }
+}
+
 
   return (
 <div style={{width: '100%', height: '100%', position: 'relative', background: 'white'}}>
@@ -137,13 +138,14 @@ function SignUp() {
             <div style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex' }}>
                 <div style={{ height: 87, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 4, display: 'flex' }}>
                     <div style={{ paddingRight: 8.86, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 506.14, display: 'inline-flex' }}>
-                        <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Password</div>
+                        <div style={{ color: '#666666', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Password  </div>
                     </div>
                     <div style={{ width: 665, height: 56, position: 'relative', borderRadius: 12, border: '1px solid rgba(102, 102, 102, 0.35)' }}>
                     <input name="password" type="password" placeholder="Enter your password" onChange={handleInputChange} value={user.password} style={{ width: '100%', height: '100%', padding: '10px 12px', borderRadius: 12, border: 'none', fontSize: 16, fontFamily: 'Poppins', boxSizing: 'border-box' }} />
                     </div>
                 </div>
                 <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 18, display: 'inline-flex'}}>
+                
                     <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
                         <div style={{paddingTop: 8, paddingBottom: 8, paddingRight: 8, justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
                             <div style={{width: 8, height: 8, background: 'rgba(102, 102, 102, 0.60)', borderRadius: 9999}} />
@@ -169,58 +171,58 @@ function SignUp() {
                             <div style={{width: 8, height: 8, background: 'rgba(102, 102, 102, 0.60)', borderRadius: 9999}} />
                             <div style={{color: 'rgba(102, 102, 102, 0.60)', fontSize: 14, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>At Least One Number</div>
                         </div>
+                        <p style={{ color: 'red' }}>{message}</p>
                     </div>
                 </div>
             </div>
             <div style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
             <div style={{
-  width: '256px', 
-  height: '64px', 
-  paddingTop: '15px', 
-  paddingBottom: '16px', 
-  paddingLeft: '31px', 
-  paddingRight: '31px', 
-  opacity: 1,  // Changed to full opacity for better visibility
-  background: '#FFFFFF',  // Changed to a more vibrant color
-  borderRadius: '32px', 
+  width: '480px', // Slightly smaller width
+  height: '65px', // Slightly smaller height
+  paddingTop: '12px', 
+  paddingBottom: '13px', 
+  opacity: 1,  
+  background: '#666666',  // Primary button blue color
+  borderRadius: '40px',  
   overflow: 'hidden', 
   justifyContent: 'center', 
   alignItems: 'center', 
-  display: 'flex'
-}}>
+  display: 'flex',
+  cursor: 'pointer',  
+  transition: 'background-color 0.3s',  // Transition for color change
+}}
+onMouseOver={(e) => {
+  e.currentTarget.style.backgroundColor = '#1bc0c8';  // Darken background on hover
+}}
+onMouseOut={(e) => {
+  e.currentTarget.style.backgroundColor = '#666666';  // Revert background color on mouse out
+}}
+>
   <div style={{
     justifyContent: 'center', 
     alignItems: 'center', 
     gap: '8px', 
-    display: 'flex'
+    display: 'flex',
+    width: '100%',  // Ensures the inner div fills the outer div
+    height: '100%'  // Ensures the inner div fills the outer div
   }}>
     <button type="submit" style={{
       textAlign: 'center', 
-      color: 'white',  // Changed from grey to white for better readability
-      backgroundColor: '#007bff',  // Button color matches the container
-      fontSize: '18px',  // Slightly reduced for aesthetic balance
+      color: 'white',  // White text for contrast
+      background: 'transparent',  // Transparent background to inherit from parent
+      fontSize: '25px',  // Smaller font size
       fontFamily: 'Poppins', 
-      fontWeight: '500', 
-      border: 'none',  // Clean look without border
-      borderRadius: '32px',  // Rounded to match the container
-      padding: '10px 20px',  // More appropriate padding for button size
-      cursor: 'pointer',  // Cursor indicates clickable
-      transition: 'background-color 0.3s, transform 0.3s',  // Smooth transition for hover effect
-      outline: 'none'  // Removes outline to clean up focus state
-    }} 
-    onMouseOver={(e) => {
-      e.currentTarget.style.backgroundColor = '#1bc0c8';  // Darken button on hover
-      e.currentTarget.style.transform = 'scale(1.55)';  // Slight scale to give feedback
-    }}
-    onMouseOut={(e) => {
-      e.currentTarget.style.backgroundColor = '#666666';  // Revert button color on mouse out
-      e.currentTarget.style.transform = 'scale(1.55)';  // Revert scale
-    }}
-    >
-      Create an account 
+      fontWeight: '600',  // Slightly less bold
+      border: 'none',  // No border for a clean look
+      width: '100%',  // Button fills the container
+      height: '100%',  // Button fills the container
+      outline: 'none'  // Removes focus outline
+    }}>
+      Create an account
     </button>
   </div>
 </div>
+
 
             </div>
          </form>
