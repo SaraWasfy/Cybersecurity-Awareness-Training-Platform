@@ -5,6 +5,8 @@ import "./index.css";
 import App from "./App";
 import SignUp from "./components/SignUp";
 import Login from "./components/login";
+import AboutUs from "./components/AboutUs";
+import SpotPhishing from "./components/SpotPhishing";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -14,6 +16,8 @@ root.render(
     <Routes>
       <Route path="/signup" element={<SignUp/>} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/aboutus" element={<AboutUs/>} />
+      <Route path="/SpotPhishing" element={<SpotPhishing/>} />
     </Routes>
   </BrowserRouter>
 );
