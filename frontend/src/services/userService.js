@@ -17,6 +17,10 @@ class UserService {
   getProfile() {
     return http.get(`/profile`);
   }
+
+  addPoints() {
+    return http.post(`/account/addPoints`);
+  }
 }
 
 export default new UserService();

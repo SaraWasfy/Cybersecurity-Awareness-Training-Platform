@@ -1,7 +1,7 @@
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-//import RegisterPatientService from "../services/RegisterPatientService";
+import UserService from "../services/userService";
 import { useNavigate } from "react-router-dom";
 import logo from '../images/Shield logo 2.png';
 import Photo from '../images/Shield.png';
@@ -55,29 +55,38 @@ function SpotPhishing() {
 
   const [user, setUser] = useState (initialUserState);
   const [message, setMessage] = useState('')
+  
   const [showResponse1, setShowResponse1] = useState(false);
   const [response1, setResponse1] = useState('');
+  const [buttonsDisabled1, setButtonsDisabled1] = useState(false);
 
   const [showResponse2, setShowResponse2] = useState(false);
   const [response2, setResponse2] = useState('');
+  const [buttonsDisabled2, setButtonsDisabled2] = useState(false);
 
   const [showResponse3, setShowResponse3] = useState(false);
   const [response3, setResponse3] = useState('');
+  const [buttonsDisabled3, setButtonsDisabled3] = useState(false);
 
   const [showResponse4, setShowResponse4] = useState(false);
   const [response4, setResponse4] = useState('');
+  const [buttonsDisabled4, setButtonsDisabled4] = useState(false);
 
   const [showResponse5, setShowResponse5] = useState(false);
   const [response5, setResponse5] = useState('');
+  const [buttonsDisabled5, setButtonsDisabled5] = useState(false);
 
   const [showResponse6, setShowResponse6] = useState(false);
   const [response6, setResponse6] = useState('');
+  const [buttonsDisabled6, setButtonsDisabled6] = useState(false);
 
   const [showResponse7, setShowResponse7] = useState(false);
   const [response7, setResponse7] = useState('');
+  const [buttonsDisabled7, setButtonsDisabled7] = useState(false);
 
   const [showResponse8, setShowResponse8] = useState(false);
   const [response8, setResponse8] = useState('');
+  const [buttonsDisabled8, setButtonsDisabled8] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -105,82 +114,158 @@ function SpotPhishing() {
 const handlePhishingClickQ1 = () => {
     setShowResponse1(true);
     setResponse1('correct');
+    setButtonsDisabled1(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handleLegitimateClickQ1 = () => {
     setShowResponse1(true);
     setResponse1('wrong');
+    setButtonsDisabled1(true);
 };
 
 const handlePhishingClickQ2 = () => {
     setShowResponse2(true);
     setResponse2('correct');
+    setButtonsDisabled2(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handleLegitimateClickQ2 = () => {
     setShowResponse2(true);
     setResponse2('wrong');
+    setButtonsDisabled2(true);
 };
 
 const handlePhishingClickQ3 = () => {
     setShowResponse3(true);
     setResponse3('correct');
+    setButtonsDisabled3(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handleLegitimateClickQ3 = () => {
     setShowResponse3(true);
     setResponse3('wrong');
+    setButtonsDisabled3(true);
 };
 
 const handlePhishingClickQ4 = () => {
     setShowResponse4(true);
-    setResponse4('correct');
+    setResponse4('wrong');
+    setButtonsDisabled4(true);
 };
 
 const handleLegitimateClickQ4 = () => {
     setShowResponse4(true);
-    setResponse4('wrong');
+    setResponse4('correct');
+    setButtonsDisabled4(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handlePhishingClickQ5 = () => {
     setShowResponse5(true);
     setResponse5('correct');
+    setButtonsDisabled5(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handleLegitimateClickQ5 = () => {
     setShowResponse5(true);
     setResponse5('wrong');
+    setButtonsDisabled5(true);
 };
 
 const handlePhishingClickQ6 = () => {
     setShowResponse6(true);
     setResponse6('correct');
+    setButtonsDisabled6(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handleLegitimateClickQ6 = () => {
     setShowResponse6(true);
     setResponse6('wrong');
+    setButtonsDisabled6(true);
 };
 
 const handlePhishingClickQ7 = () => {
     setShowResponse7(true);
     setResponse7('correct');
+    setButtonsDisabled7(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 
 const handleLegitimateClickQ7 = () => {
     setShowResponse7(true);
     setResponse7('wrong');
+    setButtonsDisabled7(true);
 };
 
 const handlePhishingClickQ8 = () => {
     setShowResponse8(true);
-    setResponse8('correct');
+    setResponse8('wrong');
+    setButtonsDisabled8(true);
 };
 
 const handleLegitimateClickQ8 = () => {
     setShowResponse8(true);
-    setResponse8('wrong');
+    setResponse8('correct');
+    setButtonsDisabled8(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
+
+async function Home() {
+    navigate("../login", { replace: true });
+   }
 
 //   async function registerPatient(e) {
 //     e.preventDefault();
@@ -202,10 +287,10 @@ const handleLegitimateClickQ8 = () => {
         <div style={{height: 81, position: 'relative'}}>
             <div style={{width: 1360, height: 1, left: 0, top: 80, position: 'absolute', background: '#404040'}} />
             <div style={{width: 1347, height: 67.18, left: 13, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 133, display: 'inline-flex'}}>
-                <div style={{width: 254, height: 67.18, position: 'relative'}}>
-                    <div style={{width: 204, left: 0, top: 5, position: 'absolute', color: '#54F4FC', fontSize: 40, fontFamily: 'Archivo', fontWeight: '600', lineHeight: 1.5, wordWrap: 'break-word'}}>CyProtego</div>
-                    <img style={{width: 50, height: 67.18, left: 204, top: 0, position: 'absolute'}} src={logo} alt="logo" />
-                </div>
+            <button onClick={Home} style={{width: 254, height: 67.18, position: 'relative', background: 'black', border: 'none'}}>
+                            <div style={{width: 204, left: 0, top: 5, position: 'absolute', color: '#54F4FC', fontSize: 40, fontFamily: 'Archivo', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}>CyProtego</div>
+                            <img style={{width: 50, height: 67.18, left: 204, top: 0, position: 'absolute'}} src={logo} alt="logo" />
+                        </button>
                 <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex'}}>
                     <div style={{justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
                         <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 26.24, letterSpacing: 0.80, wordWrap: 'break-word'}}>Training</div>
@@ -235,15 +320,15 @@ const handleLegitimateClickQ8 = () => {
                     The URL looks correct but is actually a look-alike. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.
                 </div>}
                 {showResponse1 && response1 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '879px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-                {showResponse1 && response1 === 'correct' && <div style={{width: '242px', left: '530px', top: '861px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+                {showResponse1 && response1 === 'correct' && <div style={{width: '242px', left: '530px', top: '861px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/> +10 points<br/></div>}
                 <img style={{width: '1246px', height: '613px', left: '28px', top: '234px', position: 'absolute'}} src={Q1} alt="Q1" />
                 <img style={{width: '482px', height: '31px', left: '28px', top: '815px', position: 'absolute'}} src={Q1L} alt="Q1 Link" />
                 {(showResponse1 && response1 === 'correct' || showResponse1 && response1 === 'wrong') && <img style={{width: '1246px', height: '613px', left: '28px', top: '234px', position: 'absolute'}} src={Q1F} alt="Q1 Feedback" />}
                 <div style={{width: '1246px', height: '103px', paddingLeft: '110px', paddingRight: '97px', left: '28px', top: '120px', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-start', gap: '341px', display: 'inline-flex'}}>
-                    <button onClick={handlePhishingClickQ1} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+                    <button disabled={buttonsDisabled1} onClick={handlePhishingClickQ1} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                         <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
                     </button>
-                    <button onClick={handleLegitimateClickQ1} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background:'black'}}>
+                    <button disabled={buttonsDisabled1} onClick={handleLegitimateClickQ1} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background:'black'}}>
                         <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
                     </button>
                 </div>
@@ -257,15 +342,15 @@ const handleLegitimateClickQ8 = () => {
                 The sender's email domain is misspelled as “efacks” and the link actually points at “mailru382.co”. Phishing often tries to trick you with look-alike URLs.
             </div>}
             {showResponse2 && response2 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '791px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse2 && response2 === 'correct' && <div style={{width: '242px', left: '530px', top: '773px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse2 && response2 === 'correct' && <div style={{width: '242px', left: '530px', top: '773px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/> +10 points<br/></div>}
             <img style={{width: '1246px', height: '535px', left: '29px', top: '223px', position: 'absolute'}} src={Q2} alt="Q2" />
             <img style={{width: '548px', height: '35px', left: '28px', top: '721px', position: 'absolute'}} src={Q2L} alt="Q2 Link" />
             {(showResponse2 && response2 === 'correct' || showResponse2 && response2 === 'wrong') && <img style={{width: '1246px', height: '535px', left: '29px', top: '223px', position: 'absolute'}} src={Q2F} alt="Q2 Feedback" />}
             <div style={{width: '1246px', height: '103px', paddingLeft: '110px', paddingRight: '97px', left: '28px', top: '83px', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-start', gap: '341px', display: 'inline-flex'}}>
-                <button onClick={handlePhishingClickQ2} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+                <button disabled={buttonsDisabled2} onClick={handlePhishingClickQ2} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                     <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
                 </button>
-                <button onClick={handleLegitimateClickQ2} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
+                <button disabled={buttonsDisabled2} onClick={handleLegitimateClickQ2} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
                     <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
                 </button>
             </div>
@@ -279,19 +364,19 @@ const handleLegitimateClickQ8 = () => {
                 There is a fishy look-alike URL. The real domain is “sytez.net”, but it is designed to look like Google Drive. Remember to be especially cautious if you aren't sure you know the sender.
             </div>}
             {showResponse3 && response3 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '521px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse3 && response3 === 'correct' && <div style={{width: '242px', left: '530px', top: '503px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse3 && response3 === 'correct' && <div style={{width: '242px', left: '530px', top: '503px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/> +10 points<br/></div>}
             <img style={{width: '1246px', height: '257px', left: '29px', top: '234px', position: 'absolute'}} src={Q3} alt="Q3" />
             <img style={{width: '552px', height: '35px', left: '28px', top: '458px', position: 'absolute'}} src={Q3L} alt="Q3 Link" />
             {(showResponse3 && response3 === 'correct' || showResponse3 && response3 === 'wrong') && <img style={{width: '1246px', height: '257px', left: '29px', top: '234px', position: 'absolute'}} src={Q3F} alt="Q3 Feedback" />}
             <div style={{width: '1246px', height: '103px', paddingLeft: '110px', paddingRight: '97px', left: '28px', top: '80px', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-start', gap: '341px', display: 'inline-flex'}}>
-                <button onClick={handlePhishingClickQ3} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+                <button disabled={buttonsDisabled3} onClick={handlePhishingClickQ3} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                     <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
                 </button>
-                <button onClick={handleLegitimateClickQ3} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
+                <button disabled={buttonsDisabled3} onClick={handleLegitimateClickQ3} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
                     <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
                 </button>
             </div>
-            <div style={{width: '1246px', height: '80px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>Time for a trip down memory lane!<br/>Remember TK from school?</div>
+            <div style={{width: '1246px', height: '80px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>Time for a trip down memory lane!<br/>Remember TK from school?</div>
         </div>
 
         <div style={{width: '1302px', height: '1234.50px', position: 'relative'}}>
@@ -299,20 +384,20 @@ const handleLegitimateClickQ8 = () => {
             {showResponse4 && <div style={{width: '1246px', height: '153px', left: '28px', top: '1081px', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>
                 This is a legitimate Dropbox communication. The sender is “dropboxmail.com”, which is unusual but legitimate, and the URL is a secure link (https) to “dropbox.com”. If you are unsure about a domain, you can use a search engine to find out more information.
             </div>}
-            {showResponse4 && response4 === 'correct' && <div style={{width: '242px', height: '64px', left: '530px', top: '1038px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse4 && response4 === 'wrong' && <div style={{width: '242px', left: '530px', top: '1020px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse4 && response4 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '1038px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
+            {showResponse4 && response4 === 'correct' && <div style={{width: '242px', left: '530px', top: '1020px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/> +10 points<br/></div>}
             <img style={{width: '1246px', height: '765px', left: '29px', top: '248px', position: 'absolute'}} src={Q4} alt="Q4" />
             <img style={{width: '586px', height: '37px', left: '28px', top: '978px', position: 'absolute'}} src={Q4L} alt="Q4 Link" />
             {(showResponse4 && response4 === 'correct' || showResponse4 && response4 === 'wrong') && <img style={{width: '1246px', height: '765px', left: '29px', top: '248px', position: 'absolute'}} src={Q4F} alt="Q4 Feedback" />}
             <div style={{width: '1246px', height: '103px', paddingLeft: '110px', paddingRight: '97px', left: '28px', top: '81px', position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-start', gap: '341px', display: 'inline-flex'}}>
-                <button onClick={handlePhishingClickQ4} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+                <button disabled={buttonsDisabled4} onClick={handlePhishingClickQ4} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                     <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
                 </button>
-                <button onClick={handleLegitimateClickQ4} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
+                <button disabled={buttonsDisabled4} onClick={handleLegitimateClickQ4} style={{width: '349px', alignSelf: 'stretch', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
                     <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
                 </button>
             </div>
-            <div style={{width: '1246px', height: '81px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>Uh oh, looks like you're out of storage!<br/>I wonder what it costs to upgrade?</div>
+            <div style={{width: '1246px', height: '81px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>Uh oh, looks like you're out of storage!<br/>I wonder what it costs to upgrade?</div>
         </div>
         <div style={{width: '1302px', height: '1006.50px', position: 'relative'}}>
             <div style={{width: '1302px', height: '0.50px', left: '0', top: '1006px', position: 'absolute', background: '#54F4FC'}} />
@@ -320,13 +405,13 @@ const handleLegitimateClickQ8 = () => {
                 This was a complicated phish! PDFs can contain malware or viruses — always be certain you trust the sender and use your browser or an online service such as Google Drive to open them safely.
             </div>}
             {showResponse5 && response5 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '810px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse5 && response5 === 'correct' && <div style={{width: '242px', left: '530px', top: '792px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse5 && response5 === 'correct' && <div style={{width: '242px', left: '530px', top: '792px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/> +10 points<br/></div>}
             <img style={{width: '1246px', height: '521px', left: '29px', top: '263px', position: 'absolute'}} src={Q5} alt="Q5" />
             {(showResponse5 && response5 === 'correct' || showResponse5 && response5 === 'wrong') && <img style={{width: '1246px', height: '521px', left: '29px', top: '263px', position: 'absolute'}} src={Q5F} alt="Q5 Feedback" />}
-            <button onClick={handlePhishingClickQ5} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+            <button disabled={buttonsDisabled5} onClick={handlePhishingClickQ5} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                 <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
             </button>
-            <button onClick={handleLegitimateClickQ5} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
+            <button disabled={buttonsDisabled5} onClick={handleLegitimateClickQ5} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
                 <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
             </button>
             <div style={{width: '1246px', height: '95px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>You’ve received a new kind of report from the school.<br/>Usually their emails come from “sharon.mosley@westmountschool.org”.<br/></div>
@@ -337,14 +422,14 @@ const handleLegitimateClickQ8 = () => {
                 This phish used a look-alike URL to masquerade as Gmail. In fact, this is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!
             </div>}
             {showResponse6 && response6 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '1087px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse6 && response6 === 'correct' && <div style={{width: '242px', left: '530px', top: '1069px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse6 && response6 === 'correct' && <div style={{width: '242px', left: '530px', top: '1069px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/> +10 points<br/></div>}
             <img style={{width: '1246px', height: '805px', left: '29px', top: '258px', position: 'absolute'}} src={Q6} alt="Q6" />
             <img style={{width: '652px', height: '37px', left: '29px', top: '1028px', position: 'absolute'}} src={Q6L} alt="Q6 Link" />
             {(showResponse6 && response6 === 'correct' || showResponse6 && response6 === 'wrong') && <img style={{width: '1246px', height: '805px', left: '29px', top: '263px', position: 'absolute'}} src={Q6F} alt="Q6 Feedback" />}
-            <button onClick={handlePhishingClickQ6} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+            <button disabled={buttonsDisabled6} onClick={handlePhishingClickQ6} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                 <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
             </button>
-            <button onClick={handleLegitimateClickQ6} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
+            <button disabled={buttonsDisabled6} onClick={handleLegitimateClickQ6} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
                 <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
             </button>
             <div style={{width: '1246px', height: '95px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>Someone has been trying to access your account.<br/>Look carefully before changing your password.</div>
@@ -355,14 +440,14 @@ const handleLegitimateClickQ8 = () => {
                 The hackers tried to use Google to hide the actual link, which is from tinyurl. An email similar to this was used to target think tanks and politicians.
             </div>}
             {showResponse7 && response7 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '860px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse7 && response7 === 'correct' && <div style={{width: '242px', left: '530px', top: '842px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse7 && response7 === 'correct' && <div style={{width: '242px', left: '530px', top: '842px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!! <br/>+10 points<br/></div>}
             <img style={{width: '1246px', height: '579px', left: '29px', top: '255px', position: 'absolute'}} src={Q7} alt="Q7" />
             <img style={{width: '652px', height: '37px', left: '29px', top: '798px', position: 'absolute'}} src={Q7L} alt="Q7 Link" />
             {(showResponse7 && response7 === 'correct' || showResponse7 && response7 === 'wrong') && <img style={{width: '1246px', height: '579px', left: '29px', top: '255px', position: 'absolute'}} src={Q7F} alt="Q7 Feedback" />}
-            <button onClick={handlePhishingClickQ7} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+            <button disabled={buttonsDisabled7} onClick={handlePhishingClickQ7} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                 <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
             </button>
-            <button onClick={handleLegitimateClickQ7} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
+            <button disabled={buttonsDisabled7} onClick={handleLegitimateClickQ7} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background: 'black'}}>
                 <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
             </button>
             <div style={{width: '1246px', height: '95px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>Your account seems to be under attack again.<br/>Or is it?</div>
@@ -372,16 +457,16 @@ const handleLegitimateClickQ8 = () => {
             {showResponse8 && <div style={{width: '1246px', height: '153px', left: '28px', top: '1199px', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>
                 It's important to be cautious with these kinds of account access requests and to be sure you trust the developer. Check the domain that is displayed, and be sure to click on it for more details.
             </div>}
-            {showResponse8 && response8 === 'correct' && <div style={{width: '242px', height: '64px', left: '530px', top: '1156px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
-            {showResponse8 && response8 === 'wrong' && <div style={{width: '242px', left: '530px', top: '1138px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!!<br/></div>}
+            {showResponse8 && response8 === 'wrong' && <div style={{width: '242px', height: '64px', left: '530px', top: '1156px', position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>WRONG :(</div>}
+            {showResponse8 && response8 === 'correct' && <div style={{width: '242px', left: '530px', top: '1138px', position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1', wordWrap: 'break-word'}}>CORRECT!! <br/>+10 points<br/></div>}
             <img style={{width: '1246px', height: '862px', left: '29px', top: '267px', position: 'absolute'}} src={Q8} alt="Q8" />
             <img style={{width: '652px', height: '37px', left: '29px', top: '1060px', position: 'absolute'}} src={Q8L1} alt="Q8 Link1" />
             <img style={{width: '652px', height: '37px', left: '29px', top: '1092px', position: 'absolute'}} src={Q8L2} alt="Q8 Link2" />
             {(showResponse8 && response8 === 'correct' || showResponse8 && response8 === 'wrong') && <img style={{width: '1246px', height: '862px', left: '29px', top: '267px', position: 'absolute'}} src={Q8F} alt="Q8 Feedback" />}
-            <button onClick={handleLegitimateClickQ8} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background:'black'}}>
+            <button disabled={buttonsDisabled8} onClick={handleLegitimateClickQ8} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '828px', top: '95px', position: 'absolute', borderRadius: '8px', border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex', background:'black'}}>
                 <div style={{width: '258px', height: '103px', textAlign: 'center', color: '#54F4FC', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '3', letterSpacing: '1.50px', wordWrap: 'break-word'}}>LEGITIMATE</div>
             </button>
-            <button onClick={handlePhishingClickQ8} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+            <button disabled={buttonsDisabled8} onClick={handlePhishingClickQ8} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '138px', top: '95px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                 <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>PHISHING</div>
             </button>
             <div style={{width: '1246px', height: '95px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>You’ve signed up for a travel planning service.<br/>You want them to scan your email, but take a close look.</div>

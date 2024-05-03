@@ -105,6 +105,27 @@ const getProfile = async (req, res) => {
     res.send(user);
   };
 
+  const addPoints = async (req, res) => {
+    const token = req.cookies.jwt;
+    var id;
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+        res.status(401).json({ message: "You are not logged in." });
+      } else {
+        id = decodedToken.name;
+      }
+    });
+    try {
+      const user = await userModel.findById(id).exec();
+        user.score = user.score + 10;
+        await user.save();
+        return res.status(200).send("10 points added successfully");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while adding points.");
+    }
+  };
+
 module.exports = {
     signup,
     getUsers,
@@ -113,4 +134,5 @@ module.exports = {
     login,
     logout,
     getProfile,
+    addPoints,
 }
