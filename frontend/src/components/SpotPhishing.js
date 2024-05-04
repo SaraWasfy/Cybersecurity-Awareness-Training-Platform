@@ -40,22 +40,7 @@ import Q8L2 from '../images/Q8 L2.png';
 import Q8F from '../images/Q8 F.png';
 
 
-function SpotPhishing() {
-  const initialUserState = {
-    name: "",
-    email: "",
-    username: "",
-    password: "",
-    dateOfBirth: "",
-    gender: "",
-    mobile: "01XXXXXXXXX",
-    emergencyContactName: "",
-    emergencyContactMobile: "",
-  };
-
-  const [user, setUser] = useState (initialUserState);
-  const [message, setMessage] = useState('')
-  
+function SpotPhishing() {  
   const [showResponse1, setShowResponse1] = useState(false);
   const [response1, setResponse1] = useState('');
   const [buttonsDisabled1, setButtonsDisabled1] = useState(false);
@@ -87,34 +72,16 @@ function SpotPhishing() {
   const [showResponse8, setShowResponse8] = useState(false);
   const [response8, setResponse8] = useState('');
   const [buttonsDisabled8, setButtonsDisabled8] = useState(false);
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    if(name == 'password'){
-      if (value.length < 6) {
-        setMessage('Password is too short');
-      } else if (!/\d/.test(value)) {
-        setMessage('Password should contain at least one digit');
-      } else if(!/[A-Z]/.test(value)){
-        setMessage('Password should contain at least one capital letters');
-      }
-      else {
-        setMessage('Password strength is good');
-      }
-    }
-    setUser({ ...user, [name]: value });
-  };
-
-
+  
   let navigate = useNavigate();
-  async function routeChange() {
-    navigate("../login", { replace: true });
-}
+  var sum=0;
+
 
 const handlePhishingClickQ1 = () => {
     setShowResponse1(true);
     setResponse1('correct');
     setButtonsDisabled1(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -134,6 +101,7 @@ const handlePhishingClickQ2 = () => {
     setShowResponse2(true);
     setResponse2('correct');
     setButtonsDisabled2(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -153,6 +121,7 @@ const handlePhishingClickQ3 = () => {
     setShowResponse3(true);
     setResponse3('correct');
     setButtonsDisabled3(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -178,6 +147,7 @@ const handleLegitimateClickQ4 = () => {
     setShowResponse4(true);
     setResponse4('correct');
     setButtonsDisabled4(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -191,6 +161,7 @@ const handlePhishingClickQ5 = () => {
     setShowResponse5(true);
     setResponse5('correct');
     setButtonsDisabled5(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -210,6 +181,7 @@ const handlePhishingClickQ6 = () => {
     setShowResponse6(true);
     setResponse6('correct');
     setButtonsDisabled6(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -229,6 +201,7 @@ const handlePhishingClickQ7 = () => {
     setShowResponse7(true);
     setResponse7('correct');
     setButtonsDisabled7(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -254,6 +227,7 @@ const handleLegitimateClickQ8 = () => {
     setShowResponse8(true);
     setResponse8('correct');
     setButtonsDisabled8(true);
+    sum=sum+10;
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -265,7 +239,23 @@ const handleLegitimateClickQ8 = () => {
 
 async function Home() {
     navigate("../login", { replace: true });
-   }
+}
+
+const handleSubmit = () => {
+    if(sum==80){
+        
+    }
+    setShowResponse8(true);
+    setResponse8('correct');
+    setButtonsDisabled8(true);
+    UserService.addPoints()
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+};   
 
 //   async function registerPatient(e) {
 //     e.preventDefault();
@@ -307,10 +297,10 @@ async function Home() {
             </div>
         </div>
         
-        <div style={{width: 154.08, height: 192.24, left: 100, top: 73, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 146, fontFamily: 'Montserrat', fontWeight: '800', lineHeight: 2, wordWrap: 'break-word'}}>#</div>
+        <div style={{width: 154.08, height: 192.24, left: 100, top: 73, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 146, fontFamily: 'Montserrat', fontWeight: '800', lineHeight: 2, wordWrap: 'break-word'}}>#</div>
         <img style={{width: 760, height: 423, left: 611, top: 97, position: 'absolute'}} src={Photo} alt="Photo" />
-        <div style={{width: 275, height: 83, left: 180, top: 150, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 68, fontFamily: 'Montserrat', fontWeight: '800', lineHeight: 2, wordWrap: 'break-word'}}>Quiz</div>
-        <div style={{width: 531, height: 132, left: 96, top: 288, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 61, fontFamily: 'Montserrat', fontWeight: '800', lineHeight: 2, wordWrap: 'break-word'}}>Is This a Phishing Email?</div>
+        <div style={{width: 275, height: 83, left: 230, top: 150, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 68, fontFamily: 'Montserrat', fontWeight: '800', lineHeight: 2, wordWrap: 'break-word'}}>Training</div>
+        <div style={{width: 800, height: 132, left: 10, top: 400, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 61, fontFamily: 'Montserrat', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>Spot The Phishing Email</div>
         <div style={{width: 1360, height: 0.50, left: 0, top: 520, position: 'absolute', background: '#404040'}} />
     </div>
     <div style={{width: '1440px', height: '9412px', position: 'relative', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
@@ -471,6 +461,9 @@ async function Home() {
             </button>
             <div style={{width: '1246px', height: '95px', left: '28px', top: '0', position: 'absolute', textAlign: 'center', color: 'white', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '800', lineHeight: '1.5', wordWrap: 'break-word'}}>You’ve signed up for a travel planning service.<br/>You want them to scan your email, but take a close look.</div>
         </div>
+        <button onClick={handleSubmit} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '470px', top: '8700px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
+                <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>Submit</div>
+        </button>
     </div>
 </div>
   );

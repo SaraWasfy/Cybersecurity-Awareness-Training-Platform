@@ -7,6 +7,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/login";
 import AboutUs from "./components/AboutUs";
 import SpotPhishing from "./components/SpotPhishing";
+import Badges from "./components/Badges";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +19,7 @@ root.render(
       <Route path="/login" element={<Login/>} />
       <Route path="/aboutus" element={<AboutUs/>} />
       <Route path="/SpotPhishing" element={<SpotPhishing/>} />
+      <Route path="/Badges" element={<Badges/>} />
     </Routes>
   </BrowserRouter>
 );
