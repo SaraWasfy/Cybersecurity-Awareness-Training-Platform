@@ -8,6 +8,7 @@ import Login from "./components/login";
 import AboutUs from "./components/AboutUs";
 import SpotPhishing from "./components/SpotPhishing";
 import Badges from "./components/Badges";
+import LandingPage from "./components/LandingPage";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,6 +21,7 @@ root.render(
       <Route path="/aboutus" element={<AboutUs/>} />
       <Route path="/SpotPhishing" element={<SpotPhishing/>} />
       <Route path="/Badges" element={<Badges/>} />
+      <Route path="/LandingPage" element={<LandingPage/>} />
     </Routes>
   </BrowserRouter>
 );
