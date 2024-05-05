@@ -126,6 +126,194 @@ const getProfile = async (req, res) => {
     }
   };
 
+  const addtrophie = async (req, res) => {
+    const token = req.cookies.jwt;
+    var id;
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+        res.status(401).json({ message: "You are not logged in." });
+      } else {
+        id = decodedToken.name;
+      }
+    });
+    try {
+      const user = await userModel.findById(id).exec();
+        user.trophie = true;
+        await user.save();
+        return res.status(200).send("You got the Spot The Phishing Email Champion Badge");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while submitting");
+    }
+  };
+
+  const getTrophie = async (req, res) => {
+    const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+    let userId;
+
+    // Verify the token and extract the user ID
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+        if (err) {
+            res.status(401).json({ hasTrophie: false });
+        } else {
+            userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+        }
+    });
+
+    if (!userId) return; // Exit if userId wasn't set
+
+    try {
+        const user = await userModel.findById(userId).exec();
+        // Return true if the user has the 'trophie' property set to true, otherwise false
+        const hasTrophie = user ? !!user.trophie : false;
+        res.status(200).json({ hasTrophie });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ hasTrophie: false });
+    }
+};
+
+  const addspot100 = async (req, res) => {
+    const token = req.cookies.jwt;
+    var id;
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+        res.status(401).json({ message: "You are not logged in." });
+      } else {
+        id = decodedToken.name;
+      }
+    });
+    try {
+      const user = await userModel.findById(id).exec();
+        user.Spot100 = true;
+        await user.save();
+        return res.status(200).send("You got the Spot The Phishing Email 100% Correct Badge");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while adding points.");
+    }
+  };
+
+  const getspot100 = async (req, res) => {
+    const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+    let userId;
+
+    // Verify the token and extract the user ID
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+        if (err) {
+            res.status(401).json({ hasSpot100: false });
+        } else {
+            userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+        }
+    });
+
+    if (!userId) return; // Exit if userId wasn't set
+
+    try {
+        const user = await userModel.findById(userId).exec();
+        // Return true if the user has the 'trophie' property set to true, otherwise false
+        const hasSpot100 = user ? !!user.Spot100 : false;
+        res.status(200).json({ hasSpot100 });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ hasSpot100: false });
+    }
+};
+
+  const addstar = async (req, res) => {
+    const token = req.cookies.jwt;
+    var id;
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+        res.status(401).json({ message: "You are not logged in." });
+      } else {
+        id = decodedToken.name;
+      }
+    });
+    try {
+      const user = await userModel.findById(id).exec();
+        user.star = true;
+        await user.save();
+        return res.status(200).send("You got the Phishing Quiz Champion Badge");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while adding points.");
+    }
+  };
+
+  const getstar = async (req, res) => {
+    const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+    let userId;
+
+    // Verify the token and extract the user ID
+    jwt.verify(token, "supersecret", (err, decodedToken) => {
+        if (err) {
+            res.status(401).json({ hasstar: false });
+        } else {
+            userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+        }
+    });
+
+    if (!userId) return; // Exit if userId wasn't set
+
+    try {
+        const user = await userModel.findById(userId).exec();
+        // Return true if the user has the 'trophie' property set to true, otherwise false
+        const hasstar = user ? !!user.star : false;
+        res.status(200).json({ hasstar });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ hasstar: false });
+    }
+};
+
+const addquiz100 = async (req, res) => {
+  const token = req.cookies.jwt;
+  var id;
+  jwt.verify(token, "supersecret", (err, decodedToken) => {
+    if (err) {
+      res.status(401).json({ message: "You are not logged in." });
+    } else {
+      id = decodedToken.name;
+    }
+  });
+  try {
+    const user = await userModel.findById(id).exec();
+      user.quiz100 = true;
+      await user.save();
+      return res.status(200).send("You got the Phishing Quiz 100% Correct Badge");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while adding points.");
+  }
+};
+
+const getquiz100 = async (req, res) => {
+  const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+  let userId;
+
+  // Verify the token and extract the user ID
+  jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+          res.status(401).json({ hasquiz100: false });
+      } else {
+          userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+      }
+  });
+
+  if (!userId) return; // Exit if userId wasn't set
+
+  try {
+      const user = await userModel.findById(userId).exec();
+      // Return true if the user has the 'trophie' property set to true, otherwise false
+      const hasquiz100 = user ? !!user.quiz100 : false;
+      res.status(200).json({ hasquiz100 });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ hasquiz100: false });
+  }
+};
+
 module.exports = {
     signup,
     getUsers,
@@ -135,4 +323,12 @@ module.exports = {
     logout,
     getProfile,
     addPoints,
+    addtrophie,
+    getTrophie,
+    addspot100,
+    getspot100,
+    addstar,
+    getstar,
+    addquiz100,
+    getquiz100,
 }

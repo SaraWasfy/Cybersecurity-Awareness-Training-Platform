@@ -74,14 +74,13 @@ function SpotPhishing() {
   const [buttonsDisabled8, setButtonsDisabled8] = useState(false);
   
   let navigate = useNavigate();
-  var sum=0;
-
+  const [sum, setSum] = useState(0);
 
 const handlePhishingClickQ1 = () => {
     setShowResponse1(true);
     setResponse1('correct');
     setButtonsDisabled1(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10);
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -101,7 +100,7 @@ const handlePhishingClickQ2 = () => {
     setShowResponse2(true);
     setResponse2('correct');
     setButtonsDisabled2(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10); 
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -121,7 +120,7 @@ const handlePhishingClickQ3 = () => {
     setShowResponse3(true);
     setResponse3('correct');
     setButtonsDisabled3(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10); 
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -147,7 +146,7 @@ const handleLegitimateClickQ4 = () => {
     setShowResponse4(true);
     setResponse4('correct');
     setButtonsDisabled4(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10);     
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -161,7 +160,7 @@ const handlePhishingClickQ5 = () => {
     setShowResponse5(true);
     setResponse5('correct');
     setButtonsDisabled5(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10);     
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -181,7 +180,7 @@ const handlePhishingClickQ6 = () => {
     setShowResponse6(true);
     setResponse6('correct');
     setButtonsDisabled6(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10);     
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -201,7 +200,7 @@ const handlePhishingClickQ7 = () => {
     setShowResponse7(true);
     setResponse7('correct');
     setButtonsDisabled7(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10);     
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -227,7 +226,7 @@ const handleLegitimateClickQ8 = () => {
     setShowResponse8(true);
     setResponse8('correct');
     setButtonsDisabled8(true);
-    sum=sum+10;
+    setSum(currentSum => currentSum + 10);    
     UserService.addPoints()
     .then((response) => {
       console.log(response);
@@ -242,34 +241,24 @@ async function Home() {
 }
 
 const handleSubmit = () => {
-    if(sum==80){
-        
+    if(sum===80){
+        UserService.addspot100()
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     }
-    setShowResponse8(true);
-    setResponse8('correct');
-    setButtonsDisabled8(true);
-    UserService.addPoints()
+    UserService.addtrophie()
     .then((response) => {
       console.log(response);
     })
     .catch((e) => {
       console.log(e);
     });
+    console.log(sum);
 };   
-
-//   async function registerPatient(e) {
-//     e.preventDefault();
-//     // no need to console log response data, only for testing
-//     RegisterPatientService.registerPatient(user)
-//       .then((response) => {
-//         //console.log(response.data);
-//         alert(response.data);
-//         window.location="http://localhost:3000/"
-//       })
-//       .catch((e) => {
-//         console.log(e);
-//       });
-//   }
 
   return (
 <div style={{width: '100%', height: '100%', background: 'black', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 3, display: 'inline-flex'}}>

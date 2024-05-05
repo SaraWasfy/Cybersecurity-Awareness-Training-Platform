@@ -127,7 +127,7 @@ async function signup() {
                 <div style={{width: 756, left: 342, top: 0, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}>About Us</div>
                 <div style={{width: 1302, height: 0.50, left: 69, top: -20, position: 'absolute', background: '#54F4FC'}} />
     </div>
-    <div style={{paddingTop: 34, paddingBottom: 42, paddingLeft: 65, paddingRight: 104, left: 0, top: 1832, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex', background:'black'}}>
+    <div style={{paddingTop: 34, paddingBottom: 42, paddingLeft: 65, paddingRight: 112, left: 0, top: 1832, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex', background:'black'}}>
         <div style={{alignSelf: 'stretch', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 104, display: 'inline-flex'}}>
             <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 48, display: 'flex'}}>
                 <div style={{width: 756, textAlign: 'center', color: 'white', fontSize: 40, fontFamily: 'Montserrat', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}>Training</div>
@@ -256,19 +256,13 @@ async function signup() {
         <div style={{width: 24, height: 24, left: 1400, top: 175, position: 'absolute', transform: 'rotate(180deg)', transformOrigin: '0 0', borderLeft: '3px #54F4FC solid', borderTop: '3px #54F4FC solid'}} />
         <div style={{width: 24, height: 24, left: 1400, top: 780, position: 'absolute', transform: 'rotate(180deg)', transformOrigin: '0 0', borderLeft: '3px #54F4FC solid', borderTop: '3px #54F4FC solid'}} />
         <div style={{left: 104, top: 706, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
-            <button style={{paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, background: '#54F4FC', borderRadius: 8, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+            <button onClick={signup}style={{paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, background: '#54F4FC', borderRadius: 8, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
                 <div style={{color: 'black', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Sign Up</div>
             </button>
-            <button style={{paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, borderRadius: 8, border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex', background:'black'}}>
+            <button onClick={login} style={{paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, borderRadius: 8, border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex', background:'black'}}>
                 <div style={{color: '#54F4FC', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Log In</div>
             </button>
         </div>
-        <button onClick={signup} style={{border:'none', paddingTop: 17, paddingBottom: 17, left: 1305, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
-            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>SIGN UP</div>
-        </button>
-        <button onClick={login} style={{border:'none', paddingTop: 17, paddingBottom: 17, left: 1198, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
-            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>LogIn</div>
-        </button>
         <div style={{height: 81, left: 40, top: 16, position: 'absolute', background:'black'}}>
             <div style={{width: 1360, height: 1, left: 0, top: 80, position: 'absolute', background: '#404040'}} />
             <div style={{width: 1347, height: 67.18, left: 13, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 133, display: 'inline-flex'}}>
@@ -289,6 +283,13 @@ async function signup() {
                     <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Contact Us</div>
                 </div>
                 <div style={{paddingTop: 17, paddingBottom: 17}} />
+                <button onClick={signup} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1205, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
+            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>SIGN UP</div>
+        </button>
+        
+        <button onClick={login} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1098, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
+            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>LogIn</div>
+        </button>
             </div>
         </div>
     </div>

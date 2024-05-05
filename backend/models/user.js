@@ -32,6 +32,39 @@ const userSchema = new Schema(
         type: Number,
         default: 0,
     },
+    trophie: {
+        type: Boolean,
+        default: false,
+    },
+    star: {
+        type: Boolean,
+        default: false,
+    },
+    first: {
+        type: Boolean,
+        default: false,
+    },
+    second: {
+        type: Boolean,
+        default: false,
+    },
+    third: {
+        type: Boolean,
+        default: false,
+    },
+    Spot100: {
+        type: Boolean,
+        default: false,
+    },
+    quiz100: {
+        type: Boolean,
+        default: false,
+    },
+    welcome: {
+        type: Boolean,
+        default: true,
+    },
+    
   },
   { timestamps: true },
 );

@@ -21,6 +21,39 @@ class UserService {
   addPoints() {
     return http.post(`/account/addPoints`);
   }
+
+  addtrophie() {
+    return http.post(`/account/addtrophie`);
+  }
+
+  getTrophie() {
+    return http.get(`/account/getTrophie`);
+  }
+
+  addspot100() {
+    return http.post(`/account/addspot100`);
+  }
+
+  getspot100() {
+    return http.get(`/account/getspot100`);
+  }
+
+  addstar() {
+    return http.post(`/account/addstar`);
+  }
+
+  getstar() {
+    return http.get(`/account/getstar`);
+  }
+
+  addquiz100() {
+    return http.post(`/account/addquiz100`);
+  }
+
+  getquiz100() {
+    return http.get(`/account/getquiz100`);
+  }
+  
 }
 
 export default new UserService();
