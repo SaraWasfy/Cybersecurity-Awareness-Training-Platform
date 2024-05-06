@@ -1,6 +1,6 @@
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //import RegisterPatientService from "../services/RegisterPatientService";
 import { useNavigate } from "react-router-dom";
 import logo from '../images/Shield logo 2.png';
@@ -9,6 +9,8 @@ import X from '../images/X.png';
 import first from '../images/Leaderboard/L1st.png';
 import second from '../images/Leaderboard/L2nd.png';
 import third from '../images/Leaderboard/L3rd.png';
+import axios from 'axios';
+import userService from "../services/userService";
 
 function RegisterPatient() {
   const initialUserState = {
@@ -25,7 +27,6 @@ function RegisterPatient() {
 
   const [patient, setPatient] = useState (initialUserState);
   const [message, setMessage] = useState('')
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     if(name == 'password'){
@@ -54,6 +55,31 @@ async function signup() {
   async function Home() {
     navigate("../login", { replace: true });
    }
+const [users, setUsers] = useState([]);
+
+const fetchUsers = async () => {
+    try {
+        const response = await userService.getUsers();
+        const data = response.data;
+
+        // Check if data is an array and has elements before sorting
+        if (Array.isArray(data) && data.length > 0) {
+            const sortedUsers = data.sort((a, b) => b.score - a.score).slice(0, 3);
+            setUsers(sortedUsers);
+        } else {
+            console.log('Data is not an array or is empty');
+        }
+    } catch (error) {
+        console.error('Failed to fetch users:', error);
+    }
+};
+useEffect(() => {
+    fetchUsers();
+    const intervalId = setInterval(fetchUsers, 5000); // Update every 5 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+}, []);
 
   return (
 <div style={{width: '100%', height: '100%', position: 'relative', background: 'black'}}>
@@ -243,6 +269,16 @@ async function signup() {
                 <div style={{textAlign: 'center'}}><span style={{color: 'white', fontSize: 72, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 3.60, wordWrap: 'break-word'}}>99%<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Lato', fontWeight: '400', lineHeight: 1, letterSpacing: 1.20, wordWrap: 'break-word'}}>Cybersecurity Awareness Training</span></div>
             </div>
         </div>
+        <div>
+            <h1>Leaderboard</h1>
+            <ol>
+                {users.map((user, index) => (
+                    <li key={index}>
+                        {user.username} - {user.score} points
+                    </li>
+                ))}
+            </ol>
+        </div>
     </div>
     <div style={{width: 1440, height: 855, left: 0, top: 0, position: 'absolute', background:'black'}}>
         <img style={{width: 829, height: 550, left: 535, top: 192, position: 'absolute'}} src={Photo} alt="Photo" />
@@ -294,6 +330,7 @@ async function signup() {
         </div>
     </div>
 </div>
+
   );
 }
 

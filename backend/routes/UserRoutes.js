@@ -12,5 +12,6 @@ UserRoutes.post("/addstar", UserController.addstar)
 UserRoutes.get("/getstar", UserController.getstar)
 UserRoutes.post("/addquiz100", UserController.addquiz100)
 UserRoutes.get("/getquiz100", UserController.getquiz100)
+UserRoutes.get("/getUsers", UserController.getUsers)
 
 module.exports = {UserRoutes}
