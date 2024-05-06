@@ -161,21 +161,63 @@ function PhishingQuiz() {
     const B8W3 = document.getElementById('Q8W3');
 
     const B9W1 = document.getElementById('Q9W1');
+    const B9W2 = document.getElementById('Q9W2');
+    const B9W3 = document.getElementById('Q9W3');
 
     const B10W1 = document.getElementById('Q10W1');
+    const B10W2 = document.getElementById('Q10W2');
+    const B10W3 = document.getElementById('Q10W3');
+    const B10W4 = document.getElementById('Q10W4');
+    const B10W5 = document.getElementById('Q10W5');
+
     const B11W1 = document.getElementById('Q11W1');
+    const B11W2 = document.getElementById('Q11W2');
+    const B11W3 = document.getElementById('Q11W3');
+    const B11W4 = document.getElementById('Q11W4');
+
     const B12W1 = document.getElementById('Q12W1');
+    const B12W2 = document.getElementById('Q12W2');
+    const B12W3 = document.getElementById('Q12W3');
+
     const B13W1 = document.getElementById('Q13W1');
+    const B13W2 = document.getElementById('Q13W2');
+    const B13W3 = document.getElementById('Q13W3');
+
     const B14W1 = document.getElementById('Q14W1');
+    const B14W2 = document.getElementById('Q14W2');
+    const B14W3 = document.getElementById('Q14W3');
+    const B14W4 = document.getElementById('Q14W4');
+
     const B15W1 = document.getElementById('Q15W1');
+    const B15W2 = document.getElementById('Q15W2');
+    const B15W3 = document.getElementById('Q15W3');
+    const B15W4 = document.getElementById('Q15W4');
+
     const B16W1 = document.getElementById('Q16W1');
+    const B16W2 = document.getElementById('Q16W2');
+    const B16W3 = document.getElementById('Q16W3');
+
     const B17W1 = document.getElementById('Q17W1');
+
     const B18W1 = document.getElementById('Q18W1');
+
     const B19W1 = document.getElementById('Q19W1');
+
     const B20W1 = document.getElementById('Q20W1');
+
     const B21W1 = document.getElementById('Q21W1');
+    const B21W2 = document.getElementById('Q21W2');
+    const B21W3 = document.getElementById('Q21W3');
+    const B21W4 = document.getElementById('Q21W4');
+
     const B22W1 = document.getElementById('Q22W1');
+    const B22W2 = document.getElementById('Q22W2');
+    const B22W3 = document.getElementById('Q22W3');
+    const B22W4 = document.getElementById('Q22W4');
+
     const B23W1 = document.getElementById('Q23W1');
+    const B23W2 = document.getElementById('Q23W2');
+    const B23W3 = document.getElementById('Q23W3');
 
     const handleCorrectClick1 = () => {
         setShowResponse1(true);
@@ -221,6 +263,10 @@ function PhishingQuiz() {
         setShowResponse2(true);
         setResponse2('wrong');
         setButtonsDisabled2(true);
+        B2R.style.background = "#03fc2c";
+        B2W1.style.backgroundColor = "#fc1a05";
+        B2W2.style.backgroundColor = "#fc1a05";
+        B2W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick3 = () => {
@@ -242,6 +288,10 @@ function PhishingQuiz() {
         setShowResponse3(true);
         setResponse3('wrong');
         setButtonsDisabled3(true);
+        B3R.style.background = "#03fc2c";
+        B3W1.style.backgroundColor = "#fc1a05";
+        B3W2.style.backgroundColor = "#fc1a05";
+        B3W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick4 = () => {
@@ -263,6 +313,10 @@ function PhishingQuiz() {
         setShowResponse4(true);
         setResponse4('wrong');
         setButtonsDisabled4(true);
+        B4R.style.background = "#03fc2c";
+        B4W1.style.backgroundColor = "#fc1a05";
+        B4W2.style.backgroundColor = "#fc1a05";
+        B4W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick5 = () => {
@@ -284,6 +338,10 @@ function PhishingQuiz() {
         setShowResponse5(true);
         setResponse5('wrong');
         setButtonsDisabled5(true);
+        B5R.style.background = "#03fc2c";
+        B5W1.style.backgroundColor = "#fc1a05";
+        B5W2.style.backgroundColor = "#fc1a05";
+        B5W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick6 = () => {
@@ -305,6 +363,10 @@ function PhishingQuiz() {
         setShowResponse6(true);
         setResponse6('wrong');
         setButtonsDisabled6(true);
+        B6R.style.background = "#03fc2c";
+        B6W1.style.backgroundColor = "#fc1a05";
+        B6W2.style.backgroundColor = "#fc1a05";
+        B6W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick7 = () => {
@@ -326,6 +388,10 @@ function PhishingQuiz() {
         setShowResponse7(true);
         setResponse7('wrong');
         setButtonsDisabled7(true);
+        B7R.style.background = "#03fc2c";
+        B7W1.style.backgroundColor = "#fc1a05";
+        B7W2.style.backgroundColor = "#fc1a05";
+        B7W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick8 = () => {
@@ -347,6 +413,10 @@ function PhishingQuiz() {
         setShowResponse8(true);
         setResponse8('wrong');
         setButtonsDisabled8(true);
+        B8R.style.background = "#03fc2c";
+        B8W1.style.backgroundColor = "#fc1a05";
+        B8W2.style.backgroundColor = "#fc1a05";
+        B8W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick9 = () => {
@@ -368,6 +438,10 @@ function PhishingQuiz() {
         setShowResponse9(true);
         setResponse9('wrong');
         setButtonsDisabled9(true);
+        B9R.style.background = "#03fc2c";
+        B9W1.style.backgroundColor = "#fc1a05";
+        B9W2.style.backgroundColor = "#fc1a05";
+        B9W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick10 = () => {
@@ -389,6 +463,12 @@ function PhishingQuiz() {
         setShowResponse10(true);
         setResponse10('wrong');
         setButtonsDisabled10(true);
+        B10R.style.background = "#03fc2c";
+        B10W1.style.backgroundColor = "#fc1a05";
+        B10W2.style.backgroundColor = "#fc1a05";
+        B10W3.style.backgroundColor = "#fc1a05";
+        B10W4.style.backgroundColor = "#fc1a05";
+        B10W5.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick11 = () => {
@@ -410,6 +490,11 @@ function PhishingQuiz() {
         setShowResponse11(true);
         setResponse11('wrong');
         setButtonsDisabled11(true);
+        B11R.style.backgroundColor = "#03fc2c";
+        B11W1.style.backgroundColor = "#fc1a05";
+        B11W2.style.backgroundColor = "#fc1a05";
+        B11W3.style.backgroundColor = "#fc1a05";
+        B11W4.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick12 = () => {
@@ -431,6 +516,10 @@ function PhishingQuiz() {
         setShowResponse12(true);
         setResponse12('wrong');
         setButtonsDisabled12(true);
+        B12R.style.backgroundColor = "#03fc2c";
+        B12W1.style.backgroundColor = "#fc1a05";
+        B12W2.style.backgroundColor = "#fc1a05";
+        B12W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick13 = () => {
@@ -452,6 +541,10 @@ function PhishingQuiz() {
         setShowResponse13(true);
         setResponse13('wrong');
         setButtonsDisabled13(true);
+        B13R.style.backgroundColor = "#03fc2c";
+        B13W1.style.backgroundColor = "#fc1a05";
+        B13W2.style.backgroundColor = "#fc1a05";
+        B13W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick14 = () => {
@@ -473,6 +566,12 @@ function PhishingQuiz() {
         setShowResponse14(true);
         setResponse14('wrong');
         setButtonsDisabled14(true);
+        B14R.style.backgroundColor = "#03fc2c";
+        B14W1.style.backgroundColor = "#fc1a05";
+        B14W2.style.backgroundColor = "#fc1a05";
+        B14W3.style.backgroundColor = "#fc1a05";
+        B14W4.style.backgroundColor = "#fc1a05";
+
     };
 
     const handleCorrectClick15 = () => {
@@ -494,6 +593,11 @@ function PhishingQuiz() {
         setShowResponse15(true);
         setResponse15('wrong');
         setButtonsDisabled15(true);
+        B15R.style.backgroundColor = "#03fc2c";
+        B15W1.style.backgroundColor = "#fc1a05";
+        B15W2.style.backgroundColor = "#fc1a05";
+        B15W3.style.backgroundColor = "#fc1a05";
+        B15W4.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick16 = () => {
@@ -515,6 +619,10 @@ function PhishingQuiz() {
         setShowResponse16(true);
         setResponse16('wrong');
         setButtonsDisabled16(true);
+        B16R.style.backgroundColor = "#03fc2c";
+        B16W1.style.backgroundColor = "#fc1a05";
+        B16W2.style.backgroundColor = "#fc1a05";
+        B16W3.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick17 = () => {
@@ -536,6 +644,8 @@ function PhishingQuiz() {
         setShowResponse17(true);
         setResponse17('wrong');
         setButtonsDisabled17(true);
+        B17R.style.backgroundColor = "#03fc2c";
+        B17W1.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick18 = () => {
@@ -557,6 +667,8 @@ function PhishingQuiz() {
         setShowResponse18(true);
         setResponse18('wrong');
         setButtonsDisabled18(true);
+        B18R.style.backgroundColor = "#03fc2c";
+        B18W1.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick19 = () => {
@@ -578,6 +690,8 @@ function PhishingQuiz() {
         setShowResponse19(true);
         setResponse19('wrong');
         setButtonsDisabled19(true);
+        B19R.style.backgroundColor = "#03fc2c";
+        B19W1.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick20 = () => {
@@ -599,6 +713,8 @@ function PhishingQuiz() {
         setShowResponse20(true);
         setResponse20('wrong');
         setButtonsDisabled20(true);
+        B20R.style.backgroundColor = "#03fc2c";
+        B20W1.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick21 = () => {
@@ -620,6 +736,11 @@ function PhishingQuiz() {
         setShowResponse21(true);
         setResponse21('wrong');
         setButtonsDisabled21(true);
+        B21R.style.backgroundColor = "#03fc2c";
+        B21W1.style.backgroundColor = "#fc1a05";
+        B21W2.style.backgroundColor = "#fc1a05";
+        B21W3.style.backgroundColor = "#fc1a05";
+        B21W4.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick22 = () => {
@@ -641,6 +762,11 @@ function PhishingQuiz() {
         setShowResponse22(true);
         setResponse22('wrong');
         setButtonsDisabled22(true);
+        B22R.style.backgroundColor = "#03fc2c";
+        B22W1.style.backgroundColor = "#fc1a05";
+        B22W2.style.backgroundColor = "#fc1a05";
+        B22W3.style.backgroundColor = "#fc1a05";
+        B22W4.style.backgroundColor = "#fc1a05";
     };
 
     const handleCorrectClick23 = () => {
@@ -662,14 +788,39 @@ function PhishingQuiz() {
         setShowResponse23(true);
         setResponse23('wrong');
         setButtonsDisabled23(true);
+        B23R.style.backgroundColor = "#03fc2c";
+        B23W1.style.backgroundColor = "#fc1a05";
+        B23W2.style.backgroundColor = "#fc1a05";
+        B23W3.style.backgroundColor = "#fc1a05";
     };
 
 
-  let navigate = useNavigate();
+    const handleSubmit = () => {
+        if(sum===230){
+            UserService.addquiz100()
+            .then((response) => {
+              console.log(response);
+            })
+            .catch((e) => {
+              console.log(e);
+            });
+        }
+        UserService.addstar()
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+        console.log(sum);
+    }; 
 
-  async function Home() {
-    navigate("../login", { replace: true });
-   }
+
+    let navigate = useNavigate();
+
+    async function Home() {
+        navigate("../login", { replace: true });
+    }
 
   return (
 <div style={{width: '100%', height: '100%', paddingBottom: 2, background: 'black', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex'}}>
@@ -721,7 +872,7 @@ function PhishingQuiz() {
                 <div style={{width: 619, height: 70, left: 0, top: 0, position: 'absolute', borderRadius: 30}} />
                 <div style={{width: 445.68, height: 43.40, left: 91.61, top: 12.60, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Ignore it.</div>
             </button>
-            <div style={{width: 1440, height: 158, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Report the phish so the company can investigate it. If the phish is real, the company can update email security rules <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>that not only protect the company but its customers as well.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>If you ignore the email, the company won't necessarily know how to detect and block that sender in the future.<br/>If you open the email or show it to coworkers, you increase the risk of adware, malware, or information theft.</span></div>
+            {showResponse1 && <div style={{width: 1440, height: 158, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Report the phish so the company can investigate it. If the phish is real, the company can update email security rules <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>that not only protect the company but its customers as well.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>If you ignore the email, the company won't necessarily know how to detect and block that sender in the future.<br/>If you open the email or show it to coworkers, you increase the risk of adware, malware, or information theft.</span></div>}
             <div style={{width: 1302, height: 127, left: 71, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>1. What should you do as a student if you suspect a phishing attack?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 558, position: 'absolute', background: 'white'}}></div>
         </div>
@@ -744,7 +895,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1289, height: 127, left: 71, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>2. What are the most common signs of a phishing scam?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 532, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 132, left: 0, top: 362, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishing emails often use a sense of urgency to make you click on a link or open an attachment without thinking.<br/>Often these emails come from someone you don't know and contain attachments or links that you don't recognize.<br/>Remember: If it's too good to be true, it probably is.</div>
+            {showResponse2 &&<div style={{width: 1440, height: 132, left: 0, top: 362, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishing emails often use a sense of urgency to make you click on a link or open an attachment without thinking.<br/>Often these emails come from someone you don't know and contain attachments or links that you don't recognize.<br/>Remember: If it's too good to be true, it probably is.</div>}
         </div>
         <div style={{width: 1440, height: 504.50, position: 'relative'}}>
             <button id="Q3R" onClick={handleCorrectClick3} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute', borderRadius: 30, background: '#54F4FC'}}>
@@ -759,7 +910,7 @@ function PhishingQuiz() {
                 <div style={{width: 619, height: 70, left: 0, top: 0, position: 'absolute', borderRadius: 30}} />
                 <div style={{width: 445.68, height: 43.40, left: 91.61, top: 12.60, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>500 million</div>
             </button>
-            <div style={{width: 1440, height: 104, left: 0, top: 362, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishing is an extremely lucrative criminal business and can be devastating to an organization if successful.<br/>Worldwide web fraud detection organizations estimate that over 3.4 billion phishing emails are sent each day.</div>
+            {showResponse3 &&<div style={{width: 1440, height: 104, left: 0, top: 362, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishing is an extremely lucrative criminal business and can be devastating to an organization if successful.<br/>Worldwide web fraud detection organizations estimate that over 3.4 billion phishing emails are sent each day.</div>}
             <button id="Q3W3" onClick={handleWrongClick3} style={{width: 619, height: 70, left: 69, top: 137, position: 'absolute', borderRadius: 30, background: '#54F4FC'}}>
                 <div style={{width: 619, height: 70, left: 0, top: 0, position: 'absolute', borderRadius: 30}} />
                 <div style={{width: 445.68, height: 43.40, left: 91.61, top: 12.60, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>250 million</div>
@@ -786,7 +937,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 83, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>4. What is spear phishing?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 570, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Spear phishing is a type of phishing that targets specific individuals or organizations in a business.<br/>The target could be system administrators, developers, executives, finance, HR or sales professionals, who handle <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>sensitive data or access numerous systems.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Spear phishing emails go after intellectual property and confidential information that could command high prices <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>from interested buyers.</span></div>
+            {showResponse4 &&<div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Spear phishing is a type of phishing that targets specific individuals or organizations in a business.<br/>The target could be system administrators, developers, executives, finance, HR or sales professionals, who handle <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>sensitive data or access numerous systems.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Spear phishing emails go after intellectual property and confidential information that could command high prices <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>from interested buyers.</span></div>}
         </div>
         <div style={{width: 1440, height: 570.50, position: 'relative'}}>
             <button id="Q5R" onClick={handleCorrectClick5} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -807,7 +958,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 83, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>5. What can happen if you click on a phishing email link or attachment?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 570, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>If you click on a link in a phishing email or open an attachment, the email sender could gain access to company <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>systems, steal information, or distribute malware into the company network or your personal computer. Don't give <br/>them this kind of power!<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Avoid clicking on links or opening attachments unless you know the sender and are sure the email is valid.</span></div>
+            {showResponse5 &&<div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>If you click on a link in a phishing email or open an attachment, the email sender could gain access to company <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>systems, steal information, or distribute malware into the company network or your personal computer. Don't give <br/>them this kind of power!<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Avoid clicking on links or opening attachments unless you know the sender and are sure the email is valid.</span></div>}
         </div>
         <div style={{width: 1440, height: 560.50, position: 'relative'}}>
             <button id="Q6R" onClick={handleCorrectClick6} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -828,7 +979,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1289, height: 127, left: 71, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>6. Why is it important for me to watch out for phishing emails if my organization has email controls and security in place?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 560, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>All of these things are true.<br/>IT has security controls in place, but the company relies on each one of us to identify and handle phish that are <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>not detected.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishing campaigns are becoming more sophisticated all the time.<br/>It pays to be vigilant when it comes to your work and personal emails.</span></div>
+            {showResponse6 &&<div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>All of these things are true.<br/>IT has security controls in place, but the company relies on each one of us to identify and handle phish that are <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>not detected.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishing campaigns are becoming more sophisticated all the time.<br/>It pays to be vigilant when it comes to your work and personal emails.</span></div>}
         </div>
         <div style={{width: 1440, height: 570.50, position: 'relative'}}>
             <button id="Q7W1" onClick={handleWrongClick7} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -849,7 +1000,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1302, height: 127, left: 71, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>7. How can a person executing a phishing attack steal someone's identity?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 570, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>A person who sends phishing emails typically asks for personal or financial information on a web-page or pop-up <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>window linked from the phishing email.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>He or she uses that information to purchase things online or gain unauthorized access to data.<br/>Phishers may use fake names, but they do not steal an identity to send the emails, nor do they request photos.</span></div>
+            {showResponse7 &&<div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>A person who sends phishing emails typically asks for personal or financial information on a web-page or pop-up <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>window linked from the phishing email.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>He or she uses that information to purchase things online or gain unauthorized access to data.<br/>Phishers may use fake names, but they do not steal an identity to send the emails, nor do they request photos.</span></div>}
         </div>
         <div style={{width: 1440, height: 570.50, position: 'relative'}}>
             <button id="Q8W1" onClick={handleWrongClick8} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -870,7 +1021,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1302, height: 127, left: 71, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>8. Why would people who send phishing emails be excited about a natural disaster or health scare?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 570, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishers capitalize on trends and current events.<br/>They might ask for contributions to charities, talk about economic uncertainty, or appeal to people's emotions <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>concerning politics or things in the news.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishers don't have any interest in the weather as a distraction tool.</span></div>
+            {showResponse8 &&<div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishers capitalize on trends and current events.<br/>They might ask for contributions to charities, talk about economic uncertainty, or appeal to people's emotions <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>concerning politics or things in the news.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishers don't have any interest in the weather as a distraction tool.</span></div>}
         </div>
         <div style={{width: 1440, height: 570.50, position: 'relative'}}>
             <button id="Q9R" onClick={handleCorrectClick9} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -891,7 +1042,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 83, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>9. Unsure whether an email is real or phishing? Which of the following should you do?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 570, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The email is vague and generic, and it's threatening something about one of your accounts.<br/>It talks about an urgent threat and sounds suspicious.<br/>The offer is too good to be true. Don't click on the link.<br/>Never give out financial or personal information in response to an email that seems questionable.</div>
+            {showResponse9 &&<div style={{width: 1440, height: 170, left: 0, top: 362, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The email is vague and generic, and it's threatening something about one of your accounts.<br/>It talks about an urgent threat and sounds suspicious.<br/>The offer is too good to be true. Don't click on the link.<br/>Never give out financial or personal information in response to an email that seems questionable.</div>}
         </div>
         <div style={{width: 1440, height: 603.50, position: 'relative'}}>
             <button id="Q10W1" onClick={handleWrongClick10} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -920,7 +1071,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1277, height: 127, left: 83, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight:5, wordWrap: 'break-word'}}>10. Which of the following choices is a legitimate email address?</div>
             <div style={{width: 1302, height: 0.50, left: 71, top: 603, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 86, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Email addresses always contain 3 parts - username (ex: jdoe, @ ("at" symbol and domain (ex: billerica.k12.ma.us )</div>
+            {showResponse10 &&<div style={{width: 1440, height: 86, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Email addresses always contain 3 parts - username (ex: jdoe, @ ("at" symbol and domain (ex: billerica.k12.ma.us )</div>}
         </div>
         <div style={{width: 1440, height: 603.50, position: 'relative'}}>
             <button id="Q11R" onClick={handleCorrectClick11} style={{width: 619, height: 70, left: 752, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -945,7 +1096,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1277, height: 127, left: 83, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>11. Lets check if you can spot a legitimate URL. Which of these links would lead to Google account settings?</div>
             <div style={{width: 1302, height: 0.50, left: 70, top: 603, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 86, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Only one of the addresses is in the Google domain the other are sub-directories of accounts.com  or a completely different<br/> website - google-accounts.com</div>
+            {showResponse11 &&<div style={{width: 1440, height: 86, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Only one of the addresses is in the Google domain the other are sub-directories of accounts.com  or a completely different<br/> website - google-accounts.com</div>}
         </div>
         <div style={{width: 1440, height: 520.50, position: 'relative'}}>
             <button id="Q12R" onClick={handleCorrectClick12} style={{width: 619, height: 70, left: 750, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -966,7 +1117,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1277, height: 127, left: 81, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>12. Some people say you that they can tell which website is secure just by looking at it. Which visual clues in a website can be trusted to identify a real website?</div>
             <div style={{width: 1302, height: 0.50, left: 68, top: 520, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 120, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>It is impossible to tell if a website is legitimate just by look and feel, since more advanced phishing attacks use <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>website clones that are identical to the originals. <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>So the only way to check if it is legitimate is to look at the security indicators in the browser.</span></div>
+            {showResponse12 &&<div style={{width: 1440, height: 120, left: 0, top: 362, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>It is impossible to tell if a website is legitimate just by look and feel, since more advanced phishing attacks use <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>website clones that are identical to the originals. <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>So the only way to check if it is legitimate is to look at the security indicators in the browser.</span></div>}
         </div>
         <div style={{width: 1440, height: 647.50, position: 'relative'}}>
             <button id="Q13W1" onClick={handleWrongClick13} style={{width: 619, height: 70, left: 750, top: 261, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -987,7 +1138,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 81, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>13. People have different techniques of telling that a website is real. What is the most important thing to pay attention to when trying to determine if a website could be trusted?</div>
             <div style={{width: 1302, height: 0.50, left: 68, top: 647, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 240, left: 0, top: 369, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Look and feel can be deceiving since it is possible to completely clone a legitimate website.<br/> People use tricks to make their URL's look as close to the real ones as possible such as changing between <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>l (lowercase L) I (capital i) 1 (one) or adding part to the URL that will redirect the user to a phishing site.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}> If a website has some links that lead to legitimate websites it doesn't mean that there isn't one link that will lead <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>to a phishy place. <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Security indicators in the browser are there for a reason, they give information about SSL connection and the <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Certificate Authority. This information should be sufficient to find a legitimate website.</span></div>
+            {showResponse13 &&<div style={{width: 1440, height: 240, left: 0, top: 369, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Look and feel can be deceiving since it is possible to completely clone a legitimate website.<br/> People use tricks to make their URL's look as close to the real ones as possible such as changing between <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>l (lowercase L) I (capital i) 1 (one) or adding part to the URL that will redirect the user to a phishing site.<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}> If a website has some links that lead to legitimate websites it doesn't mean that there isn't one link that will lead <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>to a phishy place. <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Security indicators in the browser are there for a reason, they give information about SSL connection and the <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Certificate Authority. This information should be sufficient to find a legitimate website.</span></div>}
         </div>
         <div style={{width: 1440, height: 816.50, position: 'relative'}}>
             <button id="Q14W1" onClick={handleWrongClick14} style={{width: 619, height: 70, left: 751, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1010,7 +1161,7 @@ function PhishingQuiz() {
                 <div style={{width: 619, height: 70, left: 0, top: 0, position: 'absolute',   borderRadius: 30}} />
                 <div style={{width: 594, height: 70, left: 12, top: 0, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>60+ year old's</div>
             </button>
-            <div style={{width: 1440, height: 299, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The age group most affected by online identity theft is 18-29 year olds. <br/>This is because individuals in this age range tend to be more active online, frequently using social media platforms, online banking, and making online purchases. <br/>They may also be less experienced in recognizing and avoiding online scams or protecting their personal information, making them more vulnerable to identity theft. <br/>Additionally, young adults in this age group often have a higher level of digital literacy and are more likely to engage in risky online behaviors, such as sharing personal information or using weak passwords, which can increase their risk of becoming a victim of identity theft.</div>
+            {showResponse14 &&<div style={{width: 1440, height: 299, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The age group most affected by online identity theft is 18-29 year olds. <br/>This is because individuals in this age range tend to be more active online, frequently using social media platforms, online banking, and making online purchases. <br/>They may also be less experienced in recognizing and avoiding online scams or protecting their personal information, making them more vulnerable to identity theft. <br/>Additionally, young adults in this age group often have a higher level of digital literacy and are more likely to engage in risky online behaviors, such as sharing personal information or using weak passwords, which can increase their risk of becoming a victim of identity theft.</div>}
             <div style={{width: 1277, height: 127, left: 82, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>14. What is the age group most affected by online identity theft?</div>
             <div style={{width: 1302, height: 0.50, left: 70, top: 816, position: 'absolute', background: 'white'}}></div>
         </div>
@@ -1037,7 +1188,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 82, top: 40, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>15. Spam filters can be used to filter out emails from questionable email addresses. <br/></span><span style={{color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1 , wordWrap: 'break-word'}}>How do criminals get pass this problem?</span></div>
             <div style={{width: 1302, height: 0.50, left: 70, top: 816, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 299, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The age group most affected by online identity theft is 18-29 year olds. <br/>This is because individuals in this age range tend to be more active online, frequently using social media platforms, online banking, and making online purchases. <br/>They may also be less experienced in recognizing and avoiding online scams or protecting their personal information, making them more vulnerable to identity theft. <br/>Additionally, young adults in this age group often have a higher level of digital literacy and are more likely to engage in risky online behaviors, such as sharing personal information or using weak passwords, which can increase their risk of becoming a victim of identity theft.</div>
+            {showResponse15 &&<div style={{width: 1440, height: 299, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The age group most affected by online identity theft is 18-29 year olds. <br/>This is because individuals in this age range tend to be more active online, frequently using social media platforms, online banking, and making online purchases. <br/>They may also be less experienced in recognizing and avoiding online scams or protecting their personal information, making them more vulnerable to identity theft. <br/>Additionally, young adults in this age group often have a higher level of digital literacy and are more likely to engage in risky online behaviors, such as sharing personal information or using weak passwords, which can increase their risk of becoming a victim of identity theft.</div>}
         </div>
         <div style={{width: 1440, height: 613.50, position: 'relative'}}>
             <button id="Q16W1" onClick={handleWrongClick16} style={{width: 619, height: 70, left: 750, top: 261, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1058,7 +1209,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1289, height: 127, left: 69, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>16. What is another name for a fake web site?</div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 613, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 206, left: 0, top: 369, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Website spoofing is a scam where cyber criminals create a website that closely resembles a trusted brand as well as a domain that is virtually identical to a brand's web domain. <br/>The goal of website spoofing is to lure a brand's customers, suppliers, partners and employees to a fraudulent website <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>and convince them to share sensitive information like login credentials, Social Security numbers, credit card <br/>information or bank account numbers.</span></div>
+            {showResponse16 &&<div style={{width: 1440, height: 206, left: 0, top: 369, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Website spoofing is a scam where cyber criminals create a website that closely resembles a trusted brand as well as a domain that is virtually identical to a brand's web domain. <br/>The goal of website spoofing is to lure a brand's customers, suppliers, partners and employees to a fraudulent website <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>and convince them to share sensitive information like login credentials, Social Security numbers, credit card <br/>information or bank account numbers.</span></div>}
         </div>
         <div style={{width: 1440, height: 496.50, position: 'relative'}}>
             <button id="Q17W1" onClick={handleWrongClick17} style={{width: 619, height: 70, left: 750, top: 144, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1071,7 +1222,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 81, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>17. "Your account has been accessed" is a sentence that crooks will send you in an email to make you click on their link.</div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 496, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 206, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>This statement is true because it suggests that receiving an email stating "Your account has been accessed" is a tactic used by criminals to trick individuals into clicking on their malicious links. <br/>The intention behind this email is to deceive the recipient into taking action that may compromise their personal information or security. <br/>It is important to be cautious and verify the authenticity of such emails before taking any action.</div>
+            {showResponse17 &&<div style={{width: 1440, height: 206, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>This statement is true because it suggests that receiving an email stating "Your account has been accessed" is a tactic used by criminals to trick individuals into clicking on their malicious links. <br/>The intention behind this email is to deceive the recipient into taking action that may compromise their personal information or security. <br/>It is important to be cautious and verify the authenticity of such emails before taking any action.</div>}
         </div>
         <div style={{width: 1440, height: 552.50, position: 'relative'}}>
             <button id="Q18W1"onClick={handleWrongClick18} style={{width: 619, height: 70, left: 750, top: 144, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1084,7 +1235,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1290, height: 127, left: 81, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>18. You should always be suspicious of emails that ask for your personal information.</div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 552, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 262, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Being suspicious of emails that ask for personal information is a crucial practice to ensure online security. <br/>Phishing scams often involve emails that request personal information such as passwords, social security numbers, or credit card details. <br/>These fraudulent emails are designed to deceive individuals into providing sensitive information, which can then be used for identity theft or other malicious activities. <br/>Therefore, it is important to always be suspicious of such emails and avoid providing any personal information unless the sender's identity and intentions are verified.</div>
+            {showResponse18 &&<div style={{width: 1440, height: 262, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Being suspicious of emails that ask for personal information is a crucial practice to ensure online security. <br/>Phishing scams often involve emails that request personal information such as passwords, social security numbers, or credit card details. <br/>These fraudulent emails are designed to deceive individuals into providing sensitive information, which can then be used for identity theft or other malicious activities. <br/>Therefore, it is important to always be suspicious of such emails and avoid providing any personal information unless the sender's identity and intentions are verified.</div>}
         </div>
         <div style={{width: 1440, height: 552.50, position: 'relative'}}>
             <button id="Q19W1" onClick={handleWrongClick19} style={{width: 619, height: 70, left: 750, top: 144, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1097,7 +1248,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1279, height: 127, left: 79, top: 0, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 5, wordWrap: 'break-word'}}>19. Legitimate companies would not contact you by phone or email without any prior notice.</div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 552, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 262, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Legitimate companies typically follow proper communication protocols and would not randomly contact individuals through phone or email without any prior notice. <br/>They usually establish contact through official channels, such as customer service or email support, and may require prior interaction or consent from the individual before initiating any communication. <br/>Unsolicited phone calls or emails from unknown sources are often associated with scams or fraudulent activities. <br/>Therefore, it is generally true that legitimate companies would not contact you without any prior notice.</div>
+            {showResponse19 &&<div style={{width: 1440, height: 262, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Legitimate companies typically follow proper communication protocols and would not randomly contact individuals through phone or email without any prior notice. <br/>They usually establish contact through official channels, such as customer service or email support, and may require prior interaction or consent from the individual before initiating any communication. <br/>Unsolicited phone calls or emails from unknown sources are often associated with scams or fraudulent activities. <br/>Therefore, it is generally true that legitimate companies would not contact you without any prior notice.</div>}
         </div>
         <div style={{width: 1440, height: 389.50, position: 'relative'}}>
             <button id="Q20W1"onClick={handleWrongClick20} style={{width: 619, height: 70, left: 750, top: 144, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1110,7 +1261,7 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1315, height: 127, left: 69, top: 40, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>20. All of the following are targets of phishing attacks<br/></span><span style={{color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>(Corporations, Hospitals, Universities, Schools, Adult Individuals, Children, General Public)</span></div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 389, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 99, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Spear phishing targets specific groups of people but other phishers phish for information in the whole sea that is the internet so everyone could be affected by it.</div>
+            {showResponse20 &&<div style={{width: 1440, height: 99, left: 0, top: 252, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Spear phishing targets specific groups of people but other phishers phish for information in the whole sea that is the internet so everyone could be affected by it.</div>}
         </div>
         <div style={{width: 1440, height: 757.50, position: 'relative'}}>
             <button id="Q21W1" onClick={handleWrongClick21} style={{width: 619, height: 70, left: 750, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
@@ -1135,10 +1286,10 @@ function PhishingQuiz() {
             </button>
             <div style={{width: 1292, height: 127, left: 79, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>21. There are many techniques of masking fake URL's to look as legitimate as they can. Which of these links could be unsafe?</div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 757, position: 'absolute', background: 'white'}}></div>
-            <div style={{width: 1440, height: 240, left: 0, top: 479, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishers can use binary encoding to hide parts of the URL that they don't want the user to see. <br/>Everything before the @ symbol is omitted so only the part after it is important and this may be used to trick people. <br/>Some companies even have redirects to phishing websites on their servers(!) the only thing you need to do to access it is <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>to change the port you are connecting through. <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>IP addresses cannot be trusted unless you really know where that IP leads to. <br/>So, all of the above is the correct answer</span></div>
+            {showResponse21 &&<div style={{width: 1440, height: 240, left: 0, top: 479, position: 'absolute', textAlign: 'center'}}><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Phishers can use binary encoding to hide parts of the URL that they don't want the user to see. <br/>Everything before the @ symbol is omitted so only the part after it is important and this may be used to trick people. <br/>Some companies even have redirects to phishing websites on their servers(!) the only thing you need to do to access it is <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>to change the port you are connecting through. <br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>IP addresses cannot be trusted unless you really know where that IP leads to. <br/>So, all of the above is the correct answer</span></div>}
         </div>
         <div style={{width: 1440, height: 637.50, position: 'relative'}}>
-            <div style={{width: 1440, height: 120, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>While some phishers phish for specific information such as usernames and passwords, credit card details, social security numbers, others might make use of any personal information.<br/>So, the correct answer is all of the above</div>
+        {showResponse22 &&<div style={{width: 1440, height: 120, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>While some phishers phish for specific information such as usernames and passwords, credit card details, social security numbers, others might make use of any personal information.<br/>So, the correct answer is all of the above</div>}
             <button id="Q22W1" onClick={handleWrongClick22} style={{width: 619, height: 70, left: 749, top: 254, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
                 <div style={{width: 619, height: 70, left: 0, top: 0, position: 'absolute',   borderRadius: 30}} />
                 <div style={{width: 594, height: 70, left: 12, top: 0, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Other personal details</div>
@@ -1179,11 +1330,11 @@ function PhishingQuiz() {
                 <div style={{width: 619, height: 70, left: 0, top: 0, position: 'absolute',  borderRadius: 30}} />
                 <div style={{width: 594, height: 70, left: 12, top: 0, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Https:// protocol in the adress bar</div>
             </button>
-            <div style={{width: 1440, height: 187, left: 0, top: 369, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>https shows that we have a secure SSL connection.<br/>The padlock icon in the browser usually means that we're securely connected and it additionally may mean the certificate supplier is trusted which is also a reliable source of legitimacy. <br/>However, we shouldn't trust anything that is in the email itself since it can be easily forged.</div>
+            {showResponse23 &&<div style={{width: 1440, height: 187, left: 0, top: 369, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>https shows that we have a secure SSL connection.<br/>The padlock icon in the browser usually means that we're securely connected and it additionally may mean the certificate supplier is trusted which is also a reliable source of legitimacy. <br/>However, we shouldn't trust anything that is in the email itself since it can be easily forged.</div>}
             <div style={{width: 1301, height: 127, left: 69, top: 40, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 30, fontFamily: 'Mulish', fontWeight: '800', lineHeight: 1, wordWrap: 'break-word'}}>23. Your browser tries to help you detect fraudulent websites.  Which indications in the browser indicate that the site is secure?</div>
             <div style={{width: 1302, height: 0.50, left: 69, top: 594, position: 'absolute', background: 'white'}}></div>
         </div>
-        <button style={{width: 300, height: 90, left: 572, top: 13670, position: 'absolute', paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, background: '#54F4FC', borderRadius: 8, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+        <button id="Submit" onClick={handleSubmit} style={{width: 300, height: 90, left: 572, top: 13670, position: 'absolute', paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, background: '#54F4FC', borderRadius: 8, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
             <div style={{width: 300, height: 90, textAlign: 'center', color: 'black', fontSize: 30, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 3, letterSpacing: 1.50, wordWrap: 'break-word'}}>SUBMIT</div>
         </button>
     </div>

@@ -56,22 +56,28 @@ async function signup() {
     navigate("../login", { replace: true });
    }
 const [users, setUsers] = useState([]);
-
 const fetchUsers = async () => {
-    try {
-        const response = await userService.getUsers();
-        const data = response.data;
+    userService.getUsers()
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    // try {
+    //     const response = await userService.getUsers();
+    //     const data = response.data;
 
-        // Check if data is an array and has elements before sorting
-        if (Array.isArray(data) && data.length > 0) {
-            const sortedUsers = data.sort((a, b) => b.score - a.score).slice(0, 3);
-            setUsers(sortedUsers);
-        } else {
-            console.log('Data is not an array or is empty');
-        }
-    } catch (error) {
-        console.error('Failed to fetch users:', error);
-    }
+    //     Check if data is an array and has elements before sorting
+    //     if (Array.isArray(data) && data.length > 0) {
+    //         const sortedUsers = data.sort((a, b) => b.score - a.score).slice(0, 3);
+    //         setUsers(sortedUsers);
+    //     } else {
+    //         console.log('Data is not an array or is empty');
+    //     }
+    // } catch (error) {
+    //     console.error('Failed to fetch users:', error);
+    // }
 };
 useEffect(() => {
     fetchUsers();
@@ -319,11 +325,11 @@ useEffect(() => {
                     <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Contact Us</div>
                 </div>
                 <div style={{paddingTop: 17, paddingBottom: 17}} />
-                <button onClick={signup} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1205, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
+                <button onClick={login} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1205, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
             <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>LOGIN</div>
         </button>
         
-        <button onClick={login} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1098, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
+        <button onClick={signup} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1098, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
             <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>SIGNUP</div>
         </button>
             </div>

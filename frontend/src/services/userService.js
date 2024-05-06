@@ -54,7 +54,7 @@ class UserService {
     return http.get(`/account/getquiz100`);
   }
   getUsers(){
-    return http.get(`/getUsers`);
+    return http.get(`/account/getUsers`);
   }
   
 }
