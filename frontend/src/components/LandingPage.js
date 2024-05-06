@@ -105,7 +105,7 @@ async function signup() {
                     <div style={{width: 1232, height: 110, left: 0, top: 0, position: 'absolute', opacity: 0.15, background: 'linear-gradient(94deg, )'}}></div>
                     <div style={{width: 254, height: 67.18, left: 486, top: 19, position: 'absolute'}}>
                         <div style={{width: 204, left: 0, top: 5, position: 'absolute', color: '#54F4FC', fontSize: 40, fontFamily: 'Archivo', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}>CyProtego</div>
-                        <img style={{width: 50, height: 67.18, left: 204, top: 0, position: 'absolute'}} src={logo} alt="logo" />
+                        <img style={{width: 50, height: 67.18, left: 204, top: 10, position: 'absolute'}} src={logo} alt="logo" />
                     </div>
                     <div style={{width: 1232, height: 110, opacity: 0.15, background: '#54F4FC'}}></div>
                 </div>
@@ -205,24 +205,24 @@ async function signup() {
     </div>
     <div style={{width: 1440, height: 561, left: 0, top: 1271, position: 'absolute', background:'black'}}>
         <div style={{width: 160, height: 235, left: 1124, top: 303, position: 'absolute'}}>
-            <div style={{width: 90, height: 18, left: 35, top: 217, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word'}}>@username</div>
-            <div style={{width: 49, height: 23, left: 56, top: 194, position: 'absolute', color: '#E6A66C', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>1674</div>
-            <div style={{width: 125, height: 25, left: 18, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word'}}>Emma Aria</div>
+            <div style={{width: 100, height: 100, left: 30, top: 217, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}>@username</div>
+            <div style={{width: 100, height: 100, left: 30, top: 194, position: 'absolute', color: '#E6A66C', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>1674</div>
+            <div style={{width: 125, height: 100, left: 18, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>Emma Aria</div>
             <img style={{width: 160, height: 160, left: 0, top: 0, position: 'absolute'}} src={third} alt="3rd" />
         </div>
         <div style={{width: 160, height: 231, left: 144, top: 275, position: 'absolute', background:'black'}}>
-            <div style={{width: 90, height: 18, left: 35, top: 213, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word'}}>@username</div>
-            <div style={{width: 50, height: 22, left: 55, top: 191, position: 'absolute', color: '#C0C0C0', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>1847</div>
-            <div style={{width: 97, height: 29, left: 31, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word'}}>Jackson</div>
+            <div style={{width: 100, height: 100, left: 30, top: 213, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}>@username</div>
+            <div style={{width: 100, height: 100, left: 30, top: 191, position: 'absolute', color: '#C0C0C0', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>1847</div>
+            <div style={{width: 100, height: 100, left: 30, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>Jackson</div>
             <img style={{width: 160, height: 160, left: 0, top: 0, position: 'absolute'}} src={second} alt="2nd" />
         </div>
         <div style={{width: 160, height: 236, left: 641, top: 221, position: 'absolute'}}>
-            <div style={{width: 91, height: 18, left: 34, top: 218, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word'}}>@username</div>
-            <div style={{width: 56, height: 24, left: 51, top: 195, position: 'absolute', color: '#ECC704', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>2430</div>
-            <div style={{width: 64, height: 24, left: 47, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word'}}>Eiden</div>
+            <div style={{width: 100, height: 100, left: 30, top: 218, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}>@username</div>
+            <div style={{width: 100, height: 100, left: 30, top: 195, position: 'absolute', color: '#ECC704', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>2430</div>
+            <div style={{width: 100, height: 100, left: 30, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>Sara</div>
             <img style={{width: 160, height: 160, left: 0, top: 0, position: 'absolute'}} src={first} alt="1st" />
         </div>
-        <img style={{width: 82, height: 110.17, left: 680, top: 70, position: 'absolute'}} src={logo} alt="logo" />
+        <img style={{width: 82, height: 110.17, left: 680, top: 90, position: 'absolute'}} src={logo} alt="logo" />
         <div style={{width: 306, height: 58, left: 567, top: 12, position: 'absolute', color: 'white', fontSize: 48, fontFamily: 'Inter', fontWeight: '600', wordWrap: 'break-word'}}>Leaderboard </div>
     </div>
     <div style={{width: 1440, height: 421, left: 0, top: 850, position: 'absolute', background:'black'}}>
@@ -257,10 +257,10 @@ async function signup() {
         <div style={{width: 24, height: 24, left: 1400, top: 780, position: 'absolute', transform: 'rotate(180deg)', transformOrigin: '0 0', borderLeft: '3px #54F4FC solid', borderTop: '3px #54F4FC solid'}} />
         <div style={{left: 104, top: 706, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
             <button onClick={signup}style={{paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, background: '#54F4FC', borderRadius: 8, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
-                <div style={{color: 'black', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Sign Up</div>
+                <div style={{color: 'black', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>SIGNUP</div>
             </button>
             <button onClick={login} style={{paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, borderRadius: 8, border: '1px #54F4FC solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex', background:'black'}}>
-                <div style={{color: '#54F4FC', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Log In</div>
+                <div style={{color: '#54F4FC', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>LOGIN</div>
             </button>
         </div>
         <div style={{height: 81, left: 40, top: 16, position: 'absolute', background:'black'}}>
@@ -284,11 +284,11 @@ async function signup() {
                 </div>
                 <div style={{paddingTop: 17, paddingBottom: 17}} />
                 <button onClick={signup} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1205, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
-            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>SIGN UP</div>
+            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>LOGIN</div>
         </button>
         
         <button onClick={login} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1098, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
-            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>LogIn</div>
+            <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>SIGNUP</div>
         </button>
             </div>
         </div>

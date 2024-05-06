@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutUs";
 import SpotPhishing from "./components/SpotPhishing";
 import Badges from "./components/Badges";
 import LandingPage from "./components/LandingPage";
+import PhishingQuiz from "./components/PhishingQuiz";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,7 +22,8 @@ root.render(
       <Route path="/aboutus" element={<AboutUs/>} />
       <Route path="/SpotPhishing" element={<SpotPhishing/>} />
       <Route path="/Badges" element={<Badges/>} />
-      <Route path="/LandingPage" element={<LandingPage/>} />
+      <Route path="/" element={<LandingPage/>} />
+      <Route path="/PhishingQuiz" element={<PhishingQuiz/>} />
     </Routes>
   </BrowserRouter>
 );
