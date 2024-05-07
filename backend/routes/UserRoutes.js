@@ -18,6 +18,8 @@ UserRoutes.get("/first", UserController.getfirst)
 UserRoutes.get("/second", UserController.getsecond)
 UserRoutes.get("/third", UserController.getthird)
 UserRoutes.post("/setTop3", UserController.setTop3)
+UserRoutes.get("/currentUser", UserController.getProfile)
+UserRoutes.get("/logout", UserController.logout)
 
 
 module.exports = {UserRoutes}

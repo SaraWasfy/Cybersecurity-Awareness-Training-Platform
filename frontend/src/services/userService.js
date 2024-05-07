@@ -76,6 +76,14 @@ class UserService {
   setTop3() {
     return http.post(`/account/setTop3`);
   }
+
+  getCurrentUser(){
+    return http.get(`/account/currentUser`);
+  }
+
+  logout(){
+    return http.get(`/account/logout`);
+  }
   
 }
 

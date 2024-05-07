@@ -7,7 +7,6 @@ import logo from '../images/Shield logo 2.png';
 import Photo from '../images/ShieldCut.png';
 import X from '../images/X.png';
 import signUpService from "../services/signUpService";
-
 function SignUp() {
   const [user, setUser] = useState({
     firstname: "",
@@ -73,12 +72,25 @@ function SignUp() {
     }
 }
 
+async function login() {
+  navigate("../login", { replace: true });
+}
+
+async function landing() {
+  navigate("../", { replace: true });
+}
+
 
   return (
 <div style={{width: '100%', height: '100%', position: 'relative', background: 'white'}}>
-    <div style={{width: 1920, height: 1080, left: 0, top: 0, position: 'absolute'}}><img style={{width: 30, height: 37, left: 24, top: 24, position: 'absolute', borderRadius: 9999}} 
-                        src={logo} alt="logo" />
-        
+   
+    <div style={{width: 1920, height: 1080, left: 0, top: 0, position: 'absolute'}}>
+
+        <button onClick={landing} style={{border:'none', width: 30, height: 37, left: 24, top: 24, position: 'absolute', background:'white'}}>
+                <div style={{width: 32, height: 32, left: 0, top: 0, position: 'absolute'}}></div>
+                <img style={{width: 30, height: 37, left: 6.67, top: 6.67, position: 'absolute'}} src={logo} alt="logo" />
+            </button>
+
         <form onSubmit= {signup} style={{width: 839, height: 958, left: 88, top: 56, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
             <div style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 2, display: 'flex'}}>
                 <div style={{color: '#333333', fontSize: 32, fontFamily: 'Poppins', fontWeight: '500', wordWrap: 'break-word'}}>Sign Up</div>
@@ -86,7 +98,9 @@ function SignUp() {
             <div>
                 <span style={{ color: '#333333', fontSize: '16px', fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}>Already have an account?</span>
                 <span style={{ color: '#666666', fontSize: '16px', fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word' }}> </span>
-                <span style={{ color: '#111111', fontSize: '16px', fontFamily: 'Poppins', fontWeight: '400', textDecoration: 'underline', wordWrap: 'break-word' }}>Sign in</span>
+                <button onClick={login}
+                style={{border:'none', color: '#111111', fontSize: '16px', fontFamily: 'Poppins', fontWeight: '400', textDecoration: 'underline', wordWrap: 'break-word', background:'white' }}>Login
+                </button>
             </div>
          </div>
 
@@ -177,60 +191,59 @@ function SignUp() {
             </div>
             <div style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
             <div style={{
-  width: '480px', // Slightly smaller width
-  height: '65px', // Slightly smaller height
-  paddingTop: '12px', 
-  paddingBottom: '13px', 
-  opacity: 1,  
-  background: '#666666',  // Primary button blue color
-  borderRadius: '40px',  
-  overflow: 'hidden', 
-  justifyContent: 'center', 
-  alignItems: 'center', 
-  display: 'flex',
-  cursor: 'pointer',  
-  transition: 'background-color 0.3s',  // Transition for color change
-}}
-onMouseOver={(e) => {
-  e.currentTarget.style.backgroundColor = '#1bc0c8';  // Darken background on hover
-}}
-onMouseOut={(e) => {
-  e.currentTarget.style.backgroundColor = '#666666';  // Revert background color on mouse out
-}}
->
-  <div style={{
-    justifyContent: 'center', 
-    alignItems: 'center', 
-    gap: '8px', 
-    display: 'flex',
-    width: '100%',  // Ensures the inner div fills the outer div
-    height: '100%'  // Ensures the inner div fills the outer div
-  }}>
-    <button type="submit" style={{
-      textAlign: 'center', 
-      color: 'white',  // White text for contrast
-      background: 'transparent',  // Transparent background to inherit from parent
-      fontSize: '25px',  // Smaller font size
-      fontFamily: 'Poppins', 
-      fontWeight: '600',  // Slightly less bold
-      border: 'none',  // No border for a clean look
-      width: '100%',  // Button fills the container
-      height: '100%',  // Button fills the container
-      outline: 'none'  // Removes focus outline
-    }}>
-      Create an account
-    </button>
-  </div>
-</div>
+                            width: '480px', // Slightly smaller width
+                            height: '65px', // Slightly smaller height
+                            paddingTop: '12px', 
+                            paddingBottom: '13px', 
+                            opacity: 1,  
+                            background: '#666666',  // Primary button blue color
+                            borderRadius: '40px',  
+                            overflow: 'hidden', 
+                            justifyContent: 'center', 
+                            alignItems: 'center', 
+                            display: 'flex',
+                            cursor: 'pointer',  
+                            transition: 'background-color 0.3s',  // Transition for color change
+                          }}
+                          onMouseOver={(e) => {
+                            e.currentTarget.style.backgroundColor = '#1bc0c8';  // Darken background on hover
+                          }}
+                          onMouseOut={(e) => {
+                            e.currentTarget.style.backgroundColor = '#666666';  // Revert background color on mouse out
+                          }}
+                    >
+                      <div style={{
+                        justifyContent: 'center', 
+                        alignItems: 'center', 
+                        gap: '8px', 
+                        display: 'flex',
+                        width: '100%',  // Ensures the inner div fills the outer div
+                        height: '100%'  // Ensures the inner div fills the outer div
+                      }}>
+                        <button type="submit" style={{
+                          textAlign: 'center', 
+                          color: 'white',  // White text for contrast
+                          background: 'transparent',  // Transparent background to inherit from parent
+                          fontSize: '25px',  // Smaller font size
+                          fontFamily: 'Poppins', 
+                          fontWeight: '600',  // Slightly less bold
+                          border: 'none',  // No border for a clean look
+                          width: '100%',  // Button fills the container
+                          height: '100%',  // Button fills the container
+                          outline: 'none'  // Removes focus outline
+                        }}>
+                          Create an account
+                        </button>
+                      </div>
+                    </div>
 
 
             </div>
          </form>
-         <div style={{width: 32, height: 32, left: 991, top: 24, position: 'absolute'}}>
+         <button onClick={landing} style={{border:'none', width: 32, height: 32, left: 991, top: 24, position: 'absolute', background:'white'}}>
             <div style={{width: 32, height: 32, left: 0, top: 0, position: 'absolute'}}></div>
-            {/* <div style={{width: 18.67, height: 18.67, left: 6.67, top: 6.67, position: 'absolute', background: '#666666'}}></div> */}
             <img style={{width: 19, height: 19, left: 6.67, top: 6.67, position: 'absolute'}} src={X} alt="X" />
-        </div>
+        </button>
     </div>
     <div style={{width: 870, height: 1080, left: 1050, top: 0, position: 'absolute', background: 'black'}}>
         {/* <img style={{width: 506, height: 550, left: 364, top: 530, position: 'absolute'}} src={Photo} alt="photo" /> */}

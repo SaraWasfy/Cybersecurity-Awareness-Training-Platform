@@ -12,8 +12,20 @@ function AboutUs(props) {
     let navigate = useNavigate();
 
     async function Home() {
-      navigate("../login", { replace: true });
+      navigate("../Home", { replace: true });
      }
+     async function quiz() {
+        navigate("../PhishingQuiz", { replace: true });
+    }
+    async function spot() {
+        navigate("../SpotPhishing", { replace: true });
+    }
+    async function badges() {
+        navigate("../Badges", { replace: true });
+    }
+    async function aboutus() {
+        navigate("../aboutus", { replace: true });
+    }
 
     return (
         <div style={{background: 'black', width: '100%', height: '100%'}}>
@@ -81,29 +93,24 @@ function AboutUs(props) {
                 <img style={{width: 760, height: 423, left: 611, top: 81, position: 'absolute'}} src={Photo} alt="Photo" />
                 <div style={{width: 756, left: 81, top: 177, position: 'absolute'}}><span style={{color: '#54F4FC', fontSize: 56, fontFamily: 'Montserrat', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}>CyProtego Cybersecurity</span>
                 <span style={{color: 'white', fontSize: 56, fontFamily: 'Montserrat', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}> Awareness Training Platform</span></div>
-                <div style={{height: 81, left: 40, top: 0, position: 'absolute'}}>
-                    <div style={{width: 1360, height: 1, left: 0, top: 80, position: 'absolute', background: '#404040'}} />
-                    <div style={{width: 1347, height: 67.18, left: 13, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 133, display: 'inline-flex'}}>
+                <div style={{height: 81, left: 40, top: 16, position: 'absolute'}}>
+            <div style={{width: 1360, height: 1, left: 0, top: 80, position: 'absolute', background: '#404040'}} />
+            <div style={{width: 1347, height: 67.18, left: 13, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 133, display: 'inline-flex'}}>
                         <button onClick={Home} style={{width: 254, height: 67.18, position: 'relative', background: 'black', border: 'none'}}>
-                            <div style={{width: 204, left: 0, top: 5, position: 'absolute', color: '#54F4FC', fontSize: 40, fontFamily: 'Archivo', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}>CyProtego</div>
+                            <div style={{width: 204, left: 0, top: 5, position: 'absolute', color: '#54F4FC', fontSize: 40, fontFamily: 'Archivo', fontWeight: '600', lineHeight: 1.5, wordWrap: 'break-word'}}>CyProtego</div>
                             <img style={{width: 50, height: 67.18, left: 204, top: 0, position: 'absolute'}} src={logo} alt="logo" />
                         </button>
-                        <div style={{width: 254, height: 67.18, position: 'relative', background: 'black', border: 'none'}}>
-                            <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex'}}>
-                                <div style={{justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
-                                    <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 4, letterSpacing: 0.80, wordWrap: 'break-word'}}>Training</div>
-                                    <div style={{width: 18, height: 18, position: 'relative'}}>
-                                        <div style={{width: 7.50, height: 3.75, left: 5.25, top: 0, position: 'absolute', background: 'black'}}></div>
-                                    </div>
-                                </div>
-                                <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 4, letterSpacing: 0.80, wordWrap: 'break-word'}}>Leaderboard</div>
-                                <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 4, letterSpacing: 0.80, wordWrap: 'break-word'}}>Badges</div>
-                                <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 4, letterSpacing: 0.80, wordWrap: 'break-word'}}>AboutUs</div>
-                                <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 4, letterSpacing: 0.80, wordWrap: 'break-word'}}>ContactUs</div>
-                            </div>
-                        </div>
+                <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex'}}>
+                    <div style={{justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
                     </div>
+                    <button onClick={spot} style={{border:'none', width: 200, height:25, left: 400, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Spot Phishing Email</button>
+                    <button onClick={quiz} style={{border:'none', width: 150, height:25, left: 600, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Phishing Quiz</button>
+                    <button onClick={badges} style={{border:'none', width: 100, height:25, left: 750, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Badges</button>
+                    <button onClick={aboutus} style={{border:'none', width: 100, height:25, left: 850, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>About Us</button>
+                    <button onClick={Home} style={{border:'none', width: 100, height:25, left: 980, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Contact Us</button>
                 </div>
+            </div>
+        </div>
         </div>
     </div>
     );

@@ -18,13 +18,21 @@ import userService from "../services/userService";
 
 function Badges() {
   let navigate = useNavigate();
-  async function routeChange() {
-    navigate("../login", { replace: true });
-}
-
   async function Home() {
-    navigate("../login", { replace: true });
+    navigate("../Home", { replace: true });
    }
+   async function quiz() {
+    navigate("../PhishingQuiz", { replace: true });
+}
+async function spot() {
+    navigate("../SpotPhishing", { replace: true });
+}
+async function badges() {
+    navigate("../Badges", { replace: true });
+}
+async function aboutus() {
+    navigate("../aboutus", { replace: true });
+}
 
    const [hasTrophie, setHasTrophie] = useState(false);
    useEffect(() => {
@@ -142,11 +150,11 @@ function Badges() {
                 <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex'}}>
                     <div style={{justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
                     </div>
-                    <div style={{width: 100, height: 3.75, left: 400, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word'}}>Training</div>
-                    <div style={{width: 100, height: 3.75, left: 550, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word'}}>Leaderboard</div>
-                    <div style={{width: 100, height: 3.75, left: 700, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word'}}>Badges</div>
-                    <div style={{width: 100, height: 3.75, left: 850, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word'}}>About Us</div>
-                    <div style={{width: 100, height: 3.75, left: 1000, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word'}}>Contact Us</div>
+                    <button onClick={spot} style={{border:'none', width: 200, height:25, left: 400, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Spot Phishing Email</button>
+                    <button onClick={quiz} style={{border:'none', width: 150, height:25, left: 600, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Phishing Quiz</button>
+                    <button onClick={badges} style={{border:'none', width: 100, height:25, left: 750, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Badges</button>
+                    <button onClick={aboutus} style={{border:'none', width: 100, height:25, left: 850, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>About Us</button>
+                    <button onClick={Home} style={{border:'none', width: 100, height:25, left: 980, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Contact Us</button>
                 </div>
             </div>
         </div>
