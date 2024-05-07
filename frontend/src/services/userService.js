@@ -56,6 +56,10 @@ class UserService {
   getUsers(){
     return http.get(`/account/getUsers`);
   }
+
+  getTop3(){
+    return http.get(`/account/top3`);
+  }
   
 }
 

@@ -314,6 +314,23 @@ const getquiz100 = async (req, res) => {
   }
 };
 
+const getTopThreeUsers = async (req, res) => {
+  try {
+      const users = await userModel.find()
+          .sort({ score: -1 })  // Sort users by score in descending order
+          .limit(3);           // Limit to the top three users
+
+      if (users.length < 3) {
+          return res.status(404).send({ message: 'Less than three users are available.' });
+      }
+
+      res.status(200).send(users);
+  } catch (error) {
+      console.error('Error fetching top three users:', error);
+      res.status(500).send({ message: 'Failed to retrieve top three users.' });
+  }
+};
+
 module.exports = {
     signup,
     getUsers,
@@ -331,4 +348,5 @@ module.exports = {
     getstar,
     addquiz100,
     getquiz100,
+    getTopThreeUsers,
 }

@@ -12,39 +12,7 @@ import third from '../images/Leaderboard/L3rd.png';
 import axios from 'axios';
 import userService from "../services/userService";
 
-function RegisterPatient() {
-  const initialUserState = {
-    name: "",
-    email: "",
-    username: "",
-    password: "",
-    dateOfBirth: "",
-    gender: "",
-    mobile: "01XXXXXXXXX",
-    emergencyContactName: "",
-    emergencyContactMobile: "",
-  };
-
-  const [patient, setPatient] = useState (initialUserState);
-  const [message, setMessage] = useState('')
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    if(name == 'password'){
-      if (value.length < 6) {
-        setMessage('Password is too short');
-      } else if (!/\d/.test(value)) {
-        setMessage('Password should contain at least one digit');
-      } else if(!/[A-Z]/.test(value)){
-        setMessage('Password should contain at least one capital letters');
-      }
-      else {
-        setMessage('Password strength is good');
-      }
-    }
-    setPatient({ ...patient, [name]: value });
-  };
-
-
+function LandingPage() {
   let navigate = useNavigate();
   async function login() {
     navigate("../login", { replace: true });
@@ -55,37 +23,19 @@ async function signup() {
   async function Home() {
     navigate("../login", { replace: true });
    }
-const [users, setUsers] = useState([]);
-const fetchUsers = async () => {
-    userService.getUsers()
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    // try {
-    //     const response = await userService.getUsers();
-    //     const data = response.data;
 
-    //     Check if data is an array and has elements before sorting
-    //     if (Array.isArray(data) && data.length > 0) {
-    //         const sortedUsers = data.sort((a, b) => b.score - a.score).slice(0, 3);
-    //         setUsers(sortedUsers);
-    //     } else {
-    //         console.log('Data is not an array or is empty');
-    //     }
-    // } catch (error) {
-    //     console.error('Failed to fetch users:', error);
-    // }
-};
-useEffect(() => {
-    fetchUsers();
-    const intervalId = setInterval(fetchUsers, 5000); // Update every 5 seconds
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
-}, []);
+   const [Top1, setTop1] = useState([]);
+   const [Top2, setTop2] = useState([]);
+   const [Top3, setTop3] = useState([]);
+   userService.getTop3()
+   .then((response) => {
+   setTop1(response.data[0])
+   setTop2(response.data[1])
+   setTop3(response.data[2])
+   })
+   .catch((e) => {
+     console.log(e);
+   });
 
   return (
 <div style={{width: '100%', height: '100%', position: 'relative', background: 'black'}}>
@@ -237,21 +187,21 @@ useEffect(() => {
     </div>
     <div style={{width: 1440, height: 561, left: 0, top: 1271, position: 'absolute', background:'black'}}>
         <div style={{width: 160, height: 235, left: 1124, top: 303, position: 'absolute'}}>
-            <div style={{width: 100, height: 100, left: 30, top: 217, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}>@username</div>
-            <div style={{width: 100, height: 100, left: 30, top: 194, position: 'absolute', color: '#E6A66C', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>1674</div>
-            <div style={{width: 125, height: 100, left: 18, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>Emma Aria</div>
+            <div style={{width: 200, height: 100, left: -25, top: 217, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}> @{Top3.username}</div>
+            <div style={{width: 100, height: 100, left: 30, top: 194, position: 'absolute', color: '#E6A66C', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>{Top3.score}</div>
+            <div style={{width: 125, height: 100, left: 18, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>{Top3.firstname}</div>
             <img style={{width: 160, height: 160, left: 0, top: 0, position: 'absolute'}} src={third} alt="3rd" />
         </div>
         <div style={{width: 160, height: 231, left: 144, top: 275, position: 'absolute', background:'black'}}>
-            <div style={{width: 100, height: 100, left: 30, top: 213, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}>@username</div>
-            <div style={{width: 100, height: 100, left: 30, top: 191, position: 'absolute', color: '#C0C0C0', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>1847</div>
-            <div style={{width: 100, height: 100, left: 30, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>Jackson</div>
+            <div style={{width: 200, height: 100, left: -25, top: 213, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}> @{Top2.username}</div>
+            <div style={{width: 100, height: 100, left: 30, top: 191, position: 'absolute', color: '#C0C0C0', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>{Top2.score}</div>
+            <div style={{width: 100, height: 100, left: 30, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>{Top2.firstname}</div>
             <img style={{width: 160, height: 160, left: 0, top: 0, position: 'absolute'}} src={second} alt="2nd" />
         </div>
         <div style={{width: 160, height: 236, left: 641, top: 221, position: 'absolute'}}>
-            <div style={{width: 100, height: 100, left: 30, top: 218, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}>@username</div>
-            <div style={{width: 100, height: 100, left: 30, top: 195, position: 'absolute', color: '#ECC704', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>2430</div>
-            <div style={{width: 100, height: 100, left: 30, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>Sara</div>
+            <div style={{width: 200, height: 100, left: -25, top: 218, position: 'absolute', color: '#B7B3B3', fontSize: 16, fontFamily: 'Inter', fontWeight: '300', wordWrap: 'break-word', textAlign: 'center'}}> @{Top1.username}</div>
+            <div style={{width: 100, height: 100, left: 30, top: 195, position: 'absolute', color: '#ECC704', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', textAlign: 'center'}}>{Top1.score}</div>
+            <div style={{width: 100, height: 100, left: 30, top: 160, position: 'absolute', color: 'white', fontSize: 24, fontFamily: 'Inter', fontWeight: '500', wordWrap: 'break-word', textAlign: 'center'}}>{Top1.firstname}</div>
             <img style={{width: 160, height: 160, left: 0, top: 0, position: 'absolute'}} src={first} alt="1st" />
         </div>
         <img style={{width: 82, height: 110.17, left: 680, top: 90, position: 'absolute'}} src={logo} alt="logo" />
@@ -275,7 +225,7 @@ useEffect(() => {
                 <div style={{textAlign: 'center'}}><span style={{color: 'white', fontSize: 72, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 3.60, wordWrap: 'break-word'}}>99%<br/></span><span style={{color: 'white', fontSize: 24, fontFamily: 'Lato', fontWeight: '400', lineHeight: 1, letterSpacing: 1.20, wordWrap: 'break-word'}}>Cybersecurity Awareness Training</span></div>
             </div>
         </div>
-        <div>
+        {/* <div>
             <h1>Leaderboard</h1>
             <ol>
                 {users.map((user, index) => (
@@ -284,7 +234,7 @@ useEffect(() => {
                     </li>
                 ))}
             </ol>
-        </div>
+        </div> */}
     </div>
     <div style={{width: 1440, height: 855, left: 0, top: 0, position: 'absolute', background:'black'}}>
         <img style={{width: 829, height: 550, left: 535, top: 192, position: 'absolute'}} src={Photo} alt="Photo" />
@@ -340,4 +290,4 @@ useEffect(() => {
   );
 }
 
-export default RegisterPatient;
+export default LandingPage;
