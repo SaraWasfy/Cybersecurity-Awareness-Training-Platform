@@ -17,39 +17,6 @@ import starcircle from '../images/Badges/badge1.png';
 import userService from "../services/userService";
 
 function Badges() {
-  const initialUserState = {
-    trophie: "",
-    star: "",
-    first: "",
-    second: "",
-    third: "",
-    gender: "",
-    mobile: "01XXXXXXXXX",
-    emergencyContactName: "",
-    emergencyContactMobile: "",
-  };
-
-  const [patient, setPatient] = useState (initialUserState);
-  const [message, setMessage] = useState('')
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    if(name == 'password'){
-      if (value.length < 6) {
-        setMessage('Password is too short');
-      } else if (!/\d/.test(value)) {
-        setMessage('Password should contain at least one digit');
-      } else if(!/[A-Z]/.test(value)){
-        setMessage('Password should contain at least one capital letters');
-      }
-      else {
-        setMessage('Password strength is good');
-      }
-    }
-    setPatient({ ...patient, [name]: value });
-  };
-
-
   let navigate = useNavigate();
   async function routeChange() {
     navigate("../login", { replace: true });
@@ -111,6 +78,52 @@ function Badges() {
        fetchquiz100Status();
    }, []);
 
+   const [hasfirst, setHasfirst] = useState(false);
+   useEffect(() => {
+       const fetchfirstStatus = async () => {
+           const response = await UserService.getfirst();
+           console.log(response)
+           if (response.data.hasfirst) {
+               setHasfirst(true);
+           }
+       };
+
+       fetchfirstStatus();
+   }, []);
+
+   const [hassecond, setHassecond] = useState(false);
+   useEffect(() => {
+       const fetchsecondStatus = async () => {
+           const response = await UserService.getsecond();
+           console.log(response)
+           if (response.data.hassecond) {
+               setHassecond(true);
+           }
+       };
+
+       fetchsecondStatus();
+   }, []);
+
+   const [hasthird, setHasthird] = useState(false);
+   useEffect(() => {
+       const fetchthirdStatus = async () => {
+           const response = await UserService.getthird();
+           console.log(response)
+           if (response.data.hasthird) {
+               setHasthird(true);
+           }
+       };
+
+       fetchthirdStatus();
+   }, []);
+
+   UserService.setTop3()
+        .then((response) => {
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+
   return (
 <div style={{width: '100%', height: '100%', position: 'relative', background: 'black'}}>
     <div style={{width: 1440, height: 529, left: 0, top: 0, position: 'absolute', background: 'black'}}>
@@ -154,15 +167,15 @@ function Badges() {
         </div>
         <div style={{height: 181.52, left: 962, top: 57, position: 'absolute'}}>
             <div style={{width: 148, height: 30.07, left: 0, top: 151.44, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>3rd Place</div>
-            <img style={{width: 140, height: 140, left: 4, top: 0, position: 'absolute'}} src={third} alt="3rd Place" />
+            {hasthird === true  &&<img style={{width: 140, height: 140, left: 4, top: 0, position: 'absolute'}} src={third} alt="3rd Place" />}
         </div>
         <div style={{height: 181.52, left: 654, top: 57, position: 'absolute'}}>
             <div style={{width: 148, height: 30.07, left: 0, top: 151.44, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>2nd Place</div>
-            <img style={{width: 140, height: 140, left: 4, top: 0, position: 'absolute'}} src={second} alt="2nd place" />
+            {hassecond === true  &&<img style={{width: 140, height: 140, left: 4, top: 0, position: 'absolute'}} src={second} alt="2nd place" />}
         </div>
         <div style={{height: 182, left: 349, top: 57, position: 'absolute'}}>
             <div style={{width: 148, height: 31, left: 0, top: 151, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>1st Place</div>
-            <img style={{width: 140, height: 140, left: 4, top: 0, position: 'absolute'}} src={first} alt="1st place" />
+            {hasfirst === true  &&<img style={{width: 140, height: 140, left: 4, top: 0, position: 'absolute'}} src={first} alt="1st place" />}
         </div>
         <div style={{width: 214, height: 406, left: 60, top: 106, position: 'absolute'}}>
             <div style={{width: 214, height: 86, left: 0, top: 320, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>Spot The Phishing Email Champion</div>

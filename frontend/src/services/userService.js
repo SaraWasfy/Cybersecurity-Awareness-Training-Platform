@@ -60,6 +60,22 @@ class UserService {
   getTop3(){
     return http.get(`/account/top3`);
   }
+
+  getfirst(){
+    return http.get(`/account/first`);
+  }
+
+  getsecond(){
+    return http.get(`/account/second`);
+  }
+
+  getthird(){
+    return http.get(`/account/third`);
+  }
+
+  setTop3() {
+    return http.post(`/account/setTop3`);
+  }
   
 }
 

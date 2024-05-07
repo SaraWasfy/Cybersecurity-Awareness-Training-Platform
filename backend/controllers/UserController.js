@@ -318,8 +318,7 @@ const getTopThreeUsers = async (req, res) => {
   try {
       const users = await userModel.find()
           .sort({ score: -1 })  // Sort users by score in descending order
-          .limit(3);           // Limit to the top three users
-
+          .limit(3);        // Limit to the top three users
       if (users.length < 3) {
           return res.status(404).send({ message: 'Less than three users are available.' });
       }
@@ -328,6 +327,108 @@ const getTopThreeUsers = async (req, res) => {
   } catch (error) {
       console.error('Error fetching top three users:', error);
       res.status(500).send({ message: 'Failed to retrieve top three users.' });
+  }
+};
+
+const setTop3 = async (req, res) => {
+  try {
+      const users = await userModel.find().sort({ score: -1 }).limit(3);
+      users.forEach(async (user, index) => {
+          switch (index) {
+              case 0:
+                  await userModel.updateOne({ _id: user._id }, { $set: { first: true} });
+                  break;
+              case 1:
+                  await userModel.updateOne({ _id: user._id }, { $set: { second: true } });
+                  break;
+              case 2:
+                  await userModel.updateOne({ _id: user._id }, { $set: { third: true } });
+                  break;
+          }
+      });
+
+      res.status(500).send(users)
+  } catch (error) {
+      res.status(500).send({ message: 'Failed' });
+  }
+};
+
+
+const getfirst = async (req, res) => {
+  const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+  let userId;
+
+  // Verify the token and extract the user ID
+  jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+          res.status(401).json({ hasfirst: false });
+      } else {
+          userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+      }
+  });
+
+  if (!userId) return; // Exit if userId wasn't set
+
+  try {
+      const user = await userModel.findById(userId).exec();
+      // Return true if the user has the 'trophie' property set to true, otherwise false
+      const hasfirst = user ? !!user.first : false;
+      res.status(200).json({ hasfirst });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ hasfirst: false });
+  }
+};
+
+const getsecond = async (req, res) => {
+  const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+  let userId;
+
+  // Verify the token and extract the user ID
+  jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+          res.status(401).json({ hassecond: false });
+      } else {
+          userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+      }
+  });
+
+  if (!userId) return; // Exit if userId wasn't set
+
+  try {
+      const user = await userModel.findById(userId).exec();
+      // Return true if the user has the 'trophie' property set to true, otherwise false
+      const hassecond = user ? !!user.second : false;
+      res.status(200).json({ hassecond });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ hassecond: false });
+  }
+};
+
+const getthird = async (req, res) => {
+  const token = req.cookies.jwt;  // Assuming the JWT token is stored in cookies
+  let userId;
+
+  // Verify the token and extract the user ID
+  jwt.verify(token, "supersecret", (err, decodedToken) => {
+      if (err) {
+          res.status(401).json({ hasthird: false });
+      } else {
+          userId = decodedToken.name;  // The payload should contain the user ID as 'name'
+      }
+  });
+
+  if (!userId) return; // Exit if userId wasn't set
+
+  try {
+      const user = await userModel.findById(userId).exec();
+      // Return true if the user has the 'trophie' property set to true, otherwise false
+      const hasthird = user ? !!user.third : false;
+      res.status(200).json({ hasthird });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ hasthird: false });
   }
 };
 
@@ -349,4 +450,8 @@ module.exports = {
     addquiz100,
     getquiz100,
     getTopThreeUsers,
+    getfirst,
+    getsecond,
+    getthird,
+    setTop3,
 }

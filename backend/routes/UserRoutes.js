@@ -14,6 +14,10 @@ UserRoutes.post("/addquiz100", UserController.addquiz100)
 UserRoutes.get("/getquiz100", UserController.getquiz100)
 UserRoutes.get("/getUsers", UserController.getUsers)
 UserRoutes.get("/top3", UserController.getTopThreeUsers)
+UserRoutes.get("/first", UserController.getfirst)
+UserRoutes.get("/second", UserController.getsecond)
+UserRoutes.get("/third", UserController.getthird)
+UserRoutes.post("/setTop3", UserController.setTop3)
 
 
 module.exports = {UserRoutes}
