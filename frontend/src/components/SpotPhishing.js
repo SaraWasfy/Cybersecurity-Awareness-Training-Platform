@@ -244,6 +244,7 @@ const handleSubmit = () => {
     if(sum===80){
         UserService.addspot100()
         .then((response) => {
+          alert("YOU GOT ALL QUESTIONS RIGHT!! CONGRATS YOU WON Spot The Phishing Email 100% Correct BADGE");
           console.log(response);
         })
         .catch((e) => {
@@ -252,6 +253,7 @@ const handleSubmit = () => {
     }
     UserService.addtrophie()
     .then((response) => {
+      alert("YOU FINISHED THE QUIZ!! CONGRATS YOU WON Spot The Phishing Email Champion BADGE");
       console.log(response);
     })
     .catch((e) => {

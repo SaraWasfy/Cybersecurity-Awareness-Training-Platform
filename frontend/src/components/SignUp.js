@@ -47,7 +47,7 @@ function SignUp() {
       //console.log(response.data);
       console.log(response.data);
       if (response.data) {
-        alert('Welcome to our platform, login now');
+        alert('Welcome to our platform, you won the CyProtego User badge!! login now and check it out!!');
         navigate("../login", { replace: true });
       } else {
         alert(`Error, Please Try Again`);

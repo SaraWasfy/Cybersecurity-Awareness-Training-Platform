@@ -799,6 +799,7 @@ function PhishingQuiz() {
         if(sum===230){
             UserService.addquiz100()
             .then((response) => {
+              alert("YOU GOT ALL QUESTIONS RIGHT!! CONGRATS YOU WON Phishing Quiz 100% Correct BADGE");
               console.log(response);
             })
             .catch((e) => {
@@ -807,6 +808,7 @@ function PhishingQuiz() {
         }
         UserService.addstar()
         .then((response) => {
+          alert("YOU FINISHED THE QUIZ!! CONGRATS YOU WON Phishing Quiz Champion BADGE");
           console.log(response);
         })
         .catch((e) => {
