@@ -466,6 +466,7 @@ const handleSubmit = () => {
         <button onClick={handleSubmit} style={{width: '349px', height: '103px', paddingLeft: '30px', paddingRight: '30px', paddingTop: '17px', paddingBottom: '17px', left: '470px', top: '8700px', position: 'absolute', background: '#54F4FC', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', gap: '10px', display: 'inline-flex'}}>
                 <div style={{width: '258px', height: '78px', textAlign: 'center', color: 'black', fontSize: '30px', fontFamily: 'Montserrat', fontWeight: '700', lineHeight: '2', letterSpacing: '1.50px', wordWrap: 'break-word'}}>Submit</div>
         </button>
+        {showResponse8 && <div style={{width: 1440, height: 100, left: -80, top: 8820, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 40, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}> You Got {sum}/230 Points </div>}
     </div>
 </div>
   );

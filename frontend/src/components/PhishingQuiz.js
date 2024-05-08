@@ -1394,6 +1394,7 @@ function PhishingQuiz() {
         <button id="Submit" onClick={handleSubmit} style={{width: 300, height: 90, left: 572, top: 13670, position: 'absolute', paddingLeft: 30, paddingRight: 30, paddingTop: 17, paddingBottom: 17, background: '#54F4FC', borderRadius: 8, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
             <div style={{width: 300, height: 90, textAlign: 'center', color: 'black', fontSize: 30, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 3, letterSpacing: 1.50, wordWrap: 'break-word'}}>SUBMIT</div>
         </button>
+        {showResponse23 && <div style={{width: 1440, height: 100, left: 0, top: 13770, position: 'absolute', textAlign: 'center', color: '#54F4FC', fontSize: 40, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}> You Got {sum}/230 Points </div>}
     </div>
 </div>
   );
