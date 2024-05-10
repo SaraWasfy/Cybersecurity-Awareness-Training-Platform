@@ -1229,7 +1229,14 @@ function PhishingQuiz() {
             <div style={{width: 1302, height: 0.50, left: 70, top: 816, position: 'absolute', background: 'white'}}></div>
             {showResponse15 &&response15 === 'correct' && <div style={{width: 1440, height: 100, left: 0, top: 210, position: 'absolute', textAlign: 'center', color: '#03fc2c', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>+10 Points</div>}
             {showResponse15 &&response15 === 'wrong' && <div style={{width: 1440, height: 100, left: 0, top: 210, position: 'absolute', textAlign: 'center', color: '#DB1B24', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>0 Points</div>}
-            {showResponse15 &&<div style={{width: 1440, height: 299, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>The age group most affected by online identity theft is 18-29 year olds. <br/>This is because individuals in this age range tend to be more active online, frequently using social media platforms, online banking, and making online purchases. <br/>They may also be less experienced in recognizing and avoiding online scams or protecting their personal information, making them more vulnerable to identity theft. <br/>Additionally, young adults in this age group often have a higher level of digital literacy and are more likely to engage in risky online behaviors, such as sharing personal information or using weak passwords, which can increase their risk of becoming a victim of identity theft.</div>}
+            {showResponse15 &&<div style={{width: 1440, height: 299, left: 0, top: 479, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 24, fontFamily: 'Mulish', fontWeight: '700', wordWrap: 'break-word'}}>Criminals can get past spam filters by using various methods. 
+            <br/>Spoofing involves manipulating the email header to make it appear as if it is coming from a reputable source. 
+            <br/>Creating email accounts with reputable providers allows them to send emails that may not be flagged as spam. 
+            <br/>Hacking into a third-party email account gives them access to an already trusted email address. Therefore, all of the above options can be used by criminals to bypass spam filters.
+            <br/>Criminals can get past spam filters by using various methods. 
+            <br/>Spoofing involves manipulating the email header to make it appear as if it is coming from a reputable source. 
+            <br/>Creating email accounts with reputable providers allows them to send emails that may not be flagged as spam. Hacking into a third-party email account gives them access to an already trust
+</div>}
         </div>
         <div style={{width: 1440, height: 613.50, position: 'relative'}}>
             <button id="Q16W1" onClick={handleWrongClick16} style={{width: 619, height: 70, left: 750, top: 261, position: 'absolute',  borderRadius: 30, background: '#54F4FC'}}>
