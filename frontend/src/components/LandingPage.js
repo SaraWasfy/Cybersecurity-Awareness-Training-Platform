@@ -265,23 +265,18 @@ async function aboutus() {
                             <img style={{width: 50, height: 67.18, left: 204, top: 0, position: 'absolute'}} src={logo} alt="logo" />
                 </button>
                 <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex'}}>
-                    <div style={{justifyContent: 'center', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
-                        <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Training</div>
-                        <div style={{width: 18, height: 18, position: 'relative'}}>
-                            <div style={{width: 7.50, height: 3.75, left: 5.25, top: 9.50, position: 'absolute', background: 'rgba(255, 255, 255, 0.87)'}}></div>
-                        </div>
-                    </div>
-                    <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Leaderboard</div>
-                    <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Badges</div>
-                    <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>About Us</div>
-                    <div style={{color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', lineHeight: 1, letterSpacing: 0.80, wordWrap: 'break-word'}}>Contact Us</div>
+                    <div style={{border:'none', width: 200, height:25, left: 350, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Spot Phishing Email</div>
+                    <div style={{border:'none', width: 150, height:25, left: 550, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Phishing Quiz</div>
+                    <div style={{border:'none', width: 100, height:25, left: 700, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Badges</div>
+                    <div style={{border:'none', width: 100, height:25, left: 800, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>About Us</div>
+                    <div style={{border:'none', width: 100, height:25, left: 920, top: 20, position: 'absolute', textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', wordWrap: 'break-word', background:'black'}}>Contact Us</div>
                 </div>
                 <div style={{paddingTop: 17, paddingBottom: 17}} />
-                <button onClick={login} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1205, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
+                <button onClick={login} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1205, top: 14, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
                     <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>LOGIN</div>
                 </button>
         
-                <button onClick={signup} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1098, top: 16, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
+                <button onClick={signup} style={{width:100, border:'none', paddingTop: 17, paddingBottom: 17, left: 1098, top: 14, position: 'absolute', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', background:'black'}}>
                     <div style={{color: '#54F4FC', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '700', lineHeight: 1, letterSpacing: 0.90, wordWrap: 'break-word'}}>SIGNUP</div>
                 </button>
             </div>
