@@ -10,9 +10,9 @@ class UserService {
     return http.get(`/${id}/getPassword`);
   }
 
-  logout() {
-    return http.get("/logout");
-  }
+  // logout() {
+  //   return http.get("/logout");
+  // }
 
   getProfile() {
     return http.get(`/profile`);

@@ -1,38 +1,292 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* 🔹 Global Reset */
+html, body {
+    background-color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* 🔹 Ensures the React root container is centered */
+#root {
+    width: 100%;
+    max-width: 1440px; /* Adjust based on your design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🔹 Main App Container */
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 🔹 Navbar */
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar a:hover {
+    color: #54F4FC;
 }
 
-.App-link {
-  color: #61dafb;
+/* 🔹 Center All Sections */
+.container {
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 80px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 🔹 Section Titles */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+/* 🔹 Buttons */
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+button.primary {
+    background-color: #54F4FC;
+    color: black;
+}
+
+button.secondary {
+    background: none;
+    border: 1px solid #54F4FC;
+    color: #54F4FC;
+}
+
+/* 🔹 Leaderboard Section */
+.leaderboard-title {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 🔹 Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, #54F4FC 0%, #C6F0FF 37%, rgba(180, 243, 255, 0.9) 75%, #176DB4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 🔹 More Training Coming Soon */
+.training-title-container {
+    width: 100%;
+    max-width: 1220px;
+    background: linear-gradient(90deg, #54F4FC 0%, #C6F0FF 50%, #176DB4 100%);
+    border-radius: 24px;
+    padding: 20px 0;
+    margin: 40px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* 🔹 Training Section */
+.training-container {
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.training-box {
+    border: 1px solid #54F4FC;
+    border-radius: 16px;
+    padding: 48px 72px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.training-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #54F4FC;
+}
+
+.training-box p {
+    font-size: 18px;
+    letter-spacing: 0.36px;
+}
+
+/* 🔹 About Us Section */
+.about-section {
+    width: 100%;
+    max-width: 1220px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.about-title {
+    font-size: 40px;
+    color: #54F4FC;
+    font-weight: 700;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+/* 🔹 Footer Section */
+.footer-container {
+    width: 100%;
+    max-width: 1440px;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+/* 🔹 Contact Us */
+.contact-container {
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+.contact-section {
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+}
+
+.contact-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.contact-section p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 🔹 Icons Styling */
+.contact-icons i {
+    color: #54F4FC;
+    font-size: 20px;
+}
+
+/* 🔹 Flexbox Utility Classes */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* 🔹 Responsive Fixes */
+@media screen and (max-width: 1200px) {
+    .App {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .App {
+        width: 90%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .training-title {
+        font-size: 32px;
+    }
+
+    .training-box {
+        padding: 30px 50px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section {
+        max-width: 100%;
+        text-align: center;
+    }
 }
